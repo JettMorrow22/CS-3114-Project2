@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * BST class
  *
@@ -210,5 +212,87 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // print
+    // print inorder transversal
+    // nodes are indented 4 spaces * their distance from the bottom (height -
+    // level) root is level 0
+    // left if above, and right is below
+    // also print null nodes
+    // height is always gonna be height + 1
+    // create string[]????
+
+
+    /**
+     * recursive inorder transversal for BST
+     * @param output printwriter object
+     * @param cur the current node we are looking at
+     * @param level the level the cur node is at in the tree
+     */
+    public void inOrder(PrintWriter output, BSTNode<T> cur, int level) {
+        if (cur == null) {
+            level--;
+            return;
+        }
+
+        inOrder(output, cur.getLeft(), level + 1);
+        print(output, cur, level);
+        inOrder(output, cur.getRight(), level + 1);
+    }
+
+
+    /**
+     * method to print to PrintWriter
+     * @param output PrintWriter object
+     * @param cur the node we are printing
+     * @param level the level of the tree we are at
+     */
+    public void print(PrintWriter output, BSTNode<T> cur, int level) {
+        // print left node
+        int height = getHeight(root);
+        if (cur.getLeft() == null) {
+            output.println(" ".repeat((height - level + 1) * 4) + "(null)");
+        }
+
+        // print left stem
+        output.println(" ".repeat((height - level) * 4) + "\\");
+
+        // print node
+        output.println(" ".repeat((height - level) * 4) + "(" + cur.getRecord()
+        .getKey() + ")");
+
+        // print right stem
+        output.println(" ".repeat((height - level) * 4) + "/");
+
+        // print right node
+        if (cur.getRight() == null) {
+            output.println(" ".repeat((height - level + 1) * 4) + "(null)");
+        }
+    }
+
+
+    /**
+     * method to determine the max height of the tree
+     * 
+     * @param cur
+     *            current root of subtree
+     * @return the height of the tree
+     */
+    public int getHeight(BSTNode<T> cur) {
+        if (cur == null) {
+            return 0;
+        }
+
+        int left = 1 + getHeight(cur.getLeft());
+        int right = 1 + getHeight(cur.getRight());
+
+        return Math.max(left, right);
+    }
+    
+    /**
+     * basic getter for root
+     * @return the root Node 
+     */
+    public BSTNode<T> getRoot() {
+        return root;
+    }
 
 }
