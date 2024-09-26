@@ -51,12 +51,12 @@ public class SemSearch {
 
             if (isPowerOfTwo(worldSize)) {
                 throw new IllegalArgumentException(
-                    "{HashTableSize} must be >= 1 & power of 2");
+                    "{worldSize} must be >= 1 & power of 2");
             }
         }
         catch (NumberFormatException e) {
             throw new NumberFormatException(
-                "{HashTableSize} must be a number");
+                "{worldSize} must be a number");
         }
         
         // set up input Stream
@@ -66,7 +66,7 @@ public class SemSearch {
 
             // create the Controller & interpreter
             Controller controller = new Controller(worldSize);
-            CommandProcessor interpreter = new CommandProcessor(controller);
+            CommandProcessor interpreter = new CommandProcessor(controller, worldSize);
 
             // process all the commands in the input file
             interpreter.interpretAllLines(fileInput, stdout);

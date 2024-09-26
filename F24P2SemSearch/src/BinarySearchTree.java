@@ -183,7 +183,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return null;
         }
 
-        // we found the BSTNode
+        // we found the BSTNode, the keys are the same, check seminars?
         if (record.getKey().compareTo(cur.getRecord().getKey()) == 0) {
             return cur;
         }
