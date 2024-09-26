@@ -87,18 +87,7 @@ public class CommandProcessor {
 
                     Seminar temp = new Seminar(id, title, dateTime, length,
                         (short)x, (short)y, cost, keywords, description);
-
-                    if (controller.searchID(new Record<Integer>(id,
-                        temp)) == null) {
-                        // valid seminar add it to all 4 trees and thigns
-                        controller.insertAllTrees(temp, output);
-                    }
-                    else {
-                        // seminar already exists
-                        output.println(
-                            "Insert FAILED - There is already a record with ID "
-                                + id);
-                    }
+                    controller.insertAllTrees(temp, output);
                 }
                 else {
                     // bad x and y
@@ -108,6 +97,8 @@ public class CommandProcessor {
 
                 break;
             case "delete":
+                int idDelete = oneLine.nextInt();
+                controller.delete(idDelete, output);
 
                 break;
             case "search":

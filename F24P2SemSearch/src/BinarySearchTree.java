@@ -9,12 +9,14 @@
 public class BinarySearchTree<T extends Comparable<T>> {
 
     private BSTNode<T> root;
+    private int numberOfNodes;
 
     /**
      * Constructor for BinarySearchTree
      */
     public BinarySearchTree() {
         root = null;
+        numberOfNodes++;
     }
 
 
@@ -25,6 +27,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      */
     public void insert(Record<T> record) {
         root = helpInsert(root, record);
+        numberOfNodes++;
     }
 
 
@@ -70,13 +73,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
         BSTNode<T> temp = helpFind(root, record);
         if (temp != null) {
             root = helpDelete(root, record);
+            numberOfNodes--;
         }
         return temp;
     }
 
 
     /**
-     * recursive method for remove val from subtree
+     * recursive method for remove val from subtree, checks seminar in record,
+     * if seminar is not equal then it checks left subtree for duplicate key
+     * values
      * 
      * @param cur
      *            root of current subtreee
@@ -98,10 +104,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else if (compare > 0) {
             cur.setRight(helpDelete(cur.getRight(), record));
         }
-        else if (cur.getRecord().getSem().toString().equals(record.getSem()
-            .toString())) {
-            // check if the seminar's are equal
-            // node to be deleted is found!
+        else if (cur.getRecord().getSem().id() != record.getSem().id()) {
+            // seminar isnt equal so check left subtree where duplicates are
+            cur.setLeft(helpDelete(cur.getLeft(), record));
+        }
+        else {
+            // key value is the same, check if seminar is the same
 
             // leaf node
             if (cur.getLeft() == null) {
@@ -169,7 +177,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 
     /**
-     * recursive method for find
+     * recursive method for find, checks if seminars are equal if seminars are
+     * not equal if searches left subtree for duplicates
      * 
      * @param cur
      *            the current root of the subtree we are at
@@ -183,15 +192,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return null;
         }
 
-        // we found the BSTNode, the keys are the same, check seminars?
-        if (record.getKey().compareTo(cur.getRecord().getKey()) == 0) {
-            return cur;
+        // search for node
+        int compare = record.getKey().compareTo(cur.getRecord().getKey());
+        if (compare < 0) {
+            return helpFind(cur.getLeft(), record);
         }
-        else if (record.getKey().compareTo(cur.getRecord().getKey()) < 0) {
+        else if (compare > 0) {
+            return helpFind(cur.getRight(), record);
+        }
+        else if (cur.getRecord().getSem().id() != record.getSem().id()) {
+            // seminar isnt equal so check left subtree where duplicates are
             return helpFind(cur.getLeft(), record);
         }
         else {
-            return helpFind(cur.getRight(), record);
+            return cur;
         }
     }
 
