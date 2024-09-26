@@ -15,7 +15,7 @@ public class BSTNode<T extends Comparable<T>> {
     /**
      * constructor for BSTNode
      * 
-     * @param d
+     * @param r
      *            data
      */
     public BSTNode(Record<T> r) {
