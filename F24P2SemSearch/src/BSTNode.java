@@ -61,7 +61,7 @@ public class BSTNode<T extends Comparable<T>> {
      * @param data
      *            new Data
      */
-    public void setData(Record<T> r) {
+    public void setRecord(Record<T> r) {
         this.record = r;
     }
 

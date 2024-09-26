@@ -69,25 +69,95 @@ public class Controller {
     }
 
 
-    // search id, cost, date, keyword, location
+    /**
+     * method to search idBST for id
+     * 
+     * @param id
+     *            id being searched
+     * @return BSTNode that has the id & seminar or null
+     */
     public BSTNode<Integer> searchID(Record<Integer> id) {
         return idTree.find(id);
     }
 
 
+    /**
+     * method to search costBST for cost
+     * 
+     * @param cost
+     *            cost being searched
+     * @return BSTNode that has the cost & seminar or null
+     */
     public BSTNode<Integer> searchCost(Record<Integer> cost) {
         return costTree.find(cost);
     }
 
 
+    /**
+     * method to search dateBST for date
+     * 
+     * @param date
+     *            date being searched
+     * @return BSTNode that has the date & seminar or null
+     */
     public BSTNode<String> searchDate(Record<String> date) {
         return dateTree.find(date);
     }
 
 
+    /**
+     * method to search keywordBST for keyword
+     * 
+     * @param keyword
+     *            keyword being searched
+     * @return BSTNode that has the keyword & seminar or null
+     */
     public BSTNode<String> searhKeyword(Record<String> keyword) {
         return keywordTree.find(keyword);
     }
-    // print
+
+
+    /**
+     * method to print idBST
+     * 
+     * @param output
+     *            PrintWriter object
+     */
+    public void printID(PrintWriter output) {
+        idTree.inOrder(output, idTree.getRoot(), 0);
+    }
+
+
+    /**
+     * method to print costBST
+     * 
+     * @param output
+     *            PrintWriter obj
+     */
+    public void printCost(PrintWriter output) {
+        costTree.inOrder(output, costTree.getRoot(), 0);
+    }
+
+
+    /**
+     * method to print dateBST
+     * 
+     * @param output
+     *            PrintWriter obj
+     */
+    public void printDate(PrintWriter output) {
+        dateTree.inOrder(output, dateTree.getRoot(), 0);
+    }
+
+
+    /**
+     * method to print keyworkBST
+     * 
+     * @param output
+     *            PrintWriter obj
+     */
+    public void printKeyword(PrintWriter output) {
+        keywordTree.inOrder(output, keywordTree.getRoot(), 0);
+    }
 
 }

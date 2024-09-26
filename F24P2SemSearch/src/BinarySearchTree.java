@@ -124,7 +124,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 // cur has two children
                 // cur should equal largest val in left subtree
                 BSTNode<T> temp = getMax(cur.getLeft());
-                cur.setData(temp.getRecord());
+                cur.setRecord(temp.getRecord());
                 cur.setLeft(deleteMax(cur.getLeft()));
             }
         }

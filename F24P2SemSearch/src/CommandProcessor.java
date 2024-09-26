@@ -71,17 +71,16 @@ public class CommandProcessor {
             case "insert":
                 int id = oneLine.nextInt();
                 oneLine.nextLine(); // this is to get to the next line
-                String title = oneLine.next().trim();
-                oneLine.nextLine();
+                String title = oneLine.nextLine().trim();
                 String dateTime = oneLine.next().trim();
                 int length = oneLine.nextInt();
                 int x = oneLine.nextInt();
                 int y = oneLine.nextInt();
                 int cost = oneLine.nextInt();
                 oneLine.nextLine(); // go to next line
-                String keywordsLine = oneLine.nextLine();
+                String keywordsLine = oneLine.nextLine().trim();
                 String[] keywords = keywordsLine.split(" ");
-                String description = oneLine.nextLine();
+                String description = oneLine.nextLine().trim();
 
                 if (x >= 0 && x < worldSize && y >= 0 && y < worldSize) {
 
@@ -99,7 +98,8 @@ public class CommandProcessor {
             case "delete":
                 int idDelete = oneLine.nextInt();
                 controller.delete(idDelete, output);
-
+                
+                oneLine.nextLine();
                 break;
             case "search":
                 // search is weird because it is ranges
@@ -114,27 +114,44 @@ public class CommandProcessor {
                         String keyword = oneLine.next().trim();
 
                         break;
-
-                }
-
-                int low = oneLine.nextInt();
-                int high = oneLine.nextInt();
-                switch (tree) {
                     case "cost":
+                        int low = oneLine.nextInt();
+                        int high = oneLine.nextInt();
 
                         break;
                     case "date":
+                        int low_2 = oneLine.nextInt();
+                        int high_2 = oneLine.nextInt();
 
                         break;
+
                 }
-
-// if (tree.equals("location")) {
-// int r = oneLine.nextInt();
-// }
-
+                oneLine.nextLine();
                 break;
             case "print":
+                
+                String treePrint = oneLine.nextLine().trim();
+                switch (treePrint) {
+                    case "date":
+                        controller.printDate(output);
+                        break;
 
+                    case "keyword":
+                        controller.printKeyword(output);
+                        break;
+
+                    case "cost":
+                        controller.printCost(output);
+                        break;
+
+                    case "ID":
+                        controller.printID(output);
+                        break;
+                        
+//                    case "location":
+//                        controller.printLocation(output);
+
+                }
                 break;
         }
         output.flush();
