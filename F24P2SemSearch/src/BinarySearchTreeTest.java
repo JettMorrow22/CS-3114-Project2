@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import student.TestCase;
 
 /**
@@ -16,6 +17,7 @@ public class BinarySearchTreeTest extends TestCase
     private BSTNode<Integer> node;
     private Record<Integer> record;
     private Seminar sem;
+    private PrintWriter output;
     
     /**
      * setUp method for the test class
@@ -30,6 +32,9 @@ public class BinarySearchTreeTest extends TestCase
         record = new Record<Integer>(5, sem);
         search = new BinarySearchTree<Integer>();
         node = new BSTNode<Integer>(record);
+        
+        output = new PrintWriter(System.out);
+
     }
     
     /**
@@ -39,6 +44,7 @@ public class BinarySearchTreeTest extends TestCase
     {
         search.insert(record);
         
+        assertEquals(1, search.getNumberOfNodes());
         assertEquals((int) record.getKey(),
             (int) search.find(record).getRecord().getKey());
         assertEquals(record.getSem(), search.find(record).getRecord().getSem());
@@ -51,6 +57,12 @@ public class BinarySearchTreeTest extends TestCase
         search.insert(rec2);
         assertEquals((int) search.find(rec2).getRecord().getKey(), 4);
         
+        Record<Integer> rec3 = new Record<Integer>(8, sem);
+        search.insert(rec3);
+        
+        output.println("hello");
+        search.printTree(output);
+        output.flush();
     }
     
     /**

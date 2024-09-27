@@ -124,7 +124,7 @@ public class Controller {
      *            PrintWriter object
      */
     public void printID(PrintWriter output) {
-        idTree.inOrder(output, idTree.getRoot(), 0);
+        idTree.printTree(output);
     }
 
 
@@ -135,7 +135,7 @@ public class Controller {
      *            PrintWriter obj
      */
     public void printCost(PrintWriter output) {
-        costTree.inOrder(output, costTree.getRoot(), 0);
+        costTree.printTree(output);
     }
 
 
@@ -146,7 +146,7 @@ public class Controller {
      *            PrintWriter obj
      */
     public void printDate(PrintWriter output) {
-        dateTree.inOrder(output, dateTree.getRoot(), 0);
+        dateTree.printTree(output);
     }
 
 
@@ -157,7 +157,7 @@ public class Controller {
      *            PrintWriter obj
      */
     public void printKeyword(PrintWriter output) {
-        keywordTree.inOrder(output, keywordTree.getRoot(), 0);
+        keywordTree.printTree(output);
     }
 
 }

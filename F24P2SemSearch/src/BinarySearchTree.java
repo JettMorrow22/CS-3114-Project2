@@ -18,7 +18,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      */
     public BinarySearchTree() {
         root = null;
-        numberOfNodes++;
+        numberOfNodes = 0;
     }
 
 
@@ -51,11 +51,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         // check the children
         if (record.getKey().compareTo(cur.getRecord().getKey()) > 0) {
-            root.setRight(helpInsert(root.getRight(), record)); // try
+            cur.setRight(helpInsert(cur.getRight(), record)); // try
                                                                 // rightSubTree
         }
         else { // this allows duplicates to the left subtree
-            root.setLeft(helpInsert(root.getLeft(), record)); // try left
+            cur.setLeft(helpInsert(cur.getLeft(), record)); // try left
                                                               // subTree
         }
 
@@ -220,22 +220,25 @@ public class BinarySearchTree<T extends Comparable<T>> {
     // height is always gonna be height + 1
     // create string[]????
 
-
+    public void printTree(PrintWriter output) {
+        inOrder(output, root, 0, getHeight(root));
+    }
+    
     /**
      * recursive inorder transversal for BST
      * @param output printwriter object
      * @param cur the current node we are looking at
      * @param level the level the cur node is at in the tree
      */
-    public void inOrder(PrintWriter output, BSTNode<T> cur, int level) {
+    private void inOrder(PrintWriter output, BSTNode<T> cur, int level, int height) {
         if (cur == null) {
             level--;
             return;
         }
 
-        inOrder(output, cur.getLeft(), level + 1);
-        print(output, cur, level);
-        inOrder(output, cur.getRight(), level + 1);
+        inOrder(output, cur.getLeft(), level + 1, height);
+        printNode(output, cur, level, height);
+        inOrder(output, cur.getRight(), level + 1, height);
     }
 
 
@@ -245,11 +248,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param cur the node we are printing
      * @param level the level of the tree we are at
      */
-    public void print(PrintWriter output, BSTNode<T> cur, int level) {
+    private void printNode(PrintWriter output, BSTNode<T> cur, int level, int height) {
         // print left node
-        int height = getHeight(root);
         if (cur.getLeft() == null) {
-            output.println(" ".repeat((height - level + 1) * 4) + "(null)");
+            output.println(" ".repeat((height - level - 1) * 4) + "(null)");
         }
 
         // print left stem
@@ -264,7 +266,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         // print right node
         if (cur.getRight() == null) {
-            output.println(" ".repeat((height - level + 1) * 4) + "(null)");
+            output.println(" ".repeat((height - level - 1) * 4) + "(null)");
         }
     }
 
@@ -293,6 +295,14 @@ public class BinarySearchTree<T extends Comparable<T>> {
      */
     public BSTNode<T> getRoot() {
         return root;
+    }
+    
+    /**
+     * return numberOfNodes field
+     * @return numberOfNOdes
+     */
+    public int getNumberOfNodes() {
+        return numberOfNodes;
     }
 
 }
