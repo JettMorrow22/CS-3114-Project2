@@ -36,14 +36,19 @@ public class BinarySearchTreeTest extends TestCase
     public void testInsert()
     {
         search.insert(record);
-        System.out.println(record.getKey());
-        System.out.println(search.find(record).getRecord().getKey());
-        //System.out.println(record.getKey());
-        //System.out.println(search.find(record).getRecord().getKey());
-        System.out.println(record.getSem().id());
-        System.out.println(search.find(record).getRecord().getSem().id());
+        
+        assertEquals((int) record.getKey(),
+            (int) search.find(record).getRecord().getKey());
         assertEquals(record.getSem(), search.find(record).getRecord().getSem());
-        assertEquals(search.find(record), node);
+        
+        Record<Integer> rec1 = new Record<Integer>(6, sem);
+        search.insert(rec1);
+        assertEquals((int) search.find(rec1).getRecord().getKey(), 6);
+        
+        Record<Integer> rec2 = new Record<Integer>(4, sem);
+        search.insert(rec2);
+        assertEquals((int) search.find(rec2).getRecord().getKey(), 4);
+        
     }
 
 }
