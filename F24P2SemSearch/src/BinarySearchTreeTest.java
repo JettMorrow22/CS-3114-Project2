@@ -24,7 +24,9 @@ public class BinarySearchTreeTest extends TestCase
     {
         String[] strings = new String[1];
         //20, "jett", "today", 5, 10, 10, 50, strings, "test"
-        sem = new Seminar();
+        short x = 10;
+        short y = 10;
+        sem = new Seminar(20, "jett", "today", 5, x, y, 50, strings, "test");
         record = new Record<Integer>(5, sem);
         search = new BinarySearchTree<Integer>();
         node = new BSTNode<Integer>(record);
@@ -50,5 +52,61 @@ public class BinarySearchTreeTest extends TestCase
         assertEquals((int) search.find(rec2).getRecord().getKey(), 4);
         
     }
-
+    
+    /**
+     * test method for find
+     */
+    public void testFind()
+    {
+        Seminar sem1 = new Seminar();
+        Record<Integer> rec1 = new Record<Integer>(5, sem1);
+        assertNull(search.find(record));
+        search.insert(record);
+        search.insert(rec1);
+        search.find(rec1);
+    }
+    
+    /**
+     * test method for delete
+     */
+    public void testDelete()
+    {
+        search.insert(record);
+        search.delete(record);
+        assertNull(search.find(record));
+        assertNull(search.delete(record));
+        
+        Record<Integer> rec1 = new Record<Integer>(6, sem);
+        Record<Integer> rec2 = new Record<Integer>(4, sem);
+        Record<Integer> rec5 = new Record<Integer>(7, sem);
+        Record<Integer> rec6 = new Record<Integer>(8, sem);
+        
+        search.insert(record);
+        search.insert(rec2);
+        search.insert(rec1);
+        search.delete(rec1);
+        assertNull(search.find(rec1));
+        search.delete(rec2);
+        assertNull(search.find(rec2));
+        
+        search.insert(rec5);
+        search.insert(rec1);
+        search.insert(rec6);
+        search.delete(rec6);
+        
+        short xcoord = 12;
+        short ycoord = 12;
+        String[] stringarr = new String[3];
+        Seminar sem1 = new Seminar(15, "jett", "today", 5, 
+            xcoord, ycoord, 50, stringarr, "test");
+        Seminar sem2 = new Seminar(16, "jett", "today", 5, 
+            xcoord, ycoord, 50, stringarr, "test");
+        Record<Integer> rec3 = new Record<Integer>(5, sem1);
+        Record<Integer> rec4 = new Record<Integer>(5, sem1);
+        
+        search.insert(rec3);
+        search.delete(rec3);
+        assertNull(search.find(rec3));
+    }
+    
 }
