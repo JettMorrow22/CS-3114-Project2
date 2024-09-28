@@ -58,7 +58,6 @@ public class SemSearch {
         int worldSize;
         try {
             worldSize = Integer.parseInt(args[0]);
-            System.out.println(worldSize);
             if (!isPowerOfTwo(worldSize)) {
                 throw new IllegalArgumentException(
                     "{worldSize} must be >= 0 & power of 2");

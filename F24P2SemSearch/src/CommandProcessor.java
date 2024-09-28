@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -35,11 +36,7 @@ public class CommandProcessor {
      */
     public void interpretAllLines(Scanner input, PrintWriter output) {
         while (input.hasNextLine()) {
-            String line = input.nextLine().trim();
-            // Skip over any blank input lines
-            if (!line.isEmpty()) {
-                this.interpretLine(new Scanner(line), output, input);
-            }
+            this.interpretLine(input, output, input);
         }
         output.close();
     }
@@ -78,14 +75,18 @@ public class CommandProcessor {
                 int y = oneLine.nextInt();
                 int cost = oneLine.nextInt();
                 oneLine.nextLine(); // go to next line
-                String keywordsLine = oneLine.nextLine().trim();
-                String[] keywords = keywordsLine.split(" ");
+                Scanner keywordScanner = new Scanner(oneLine.nextLine());
+                ArrayList<String> keywordList = new ArrayList<>();
+                while (keywordScanner.hasNext()) {
+                    keywordList.add(keywordScanner.next().trim());
+                }
                 String description = oneLine.nextLine().trim();
 
                 if (x >= 0 && x < worldSize && y >= 0 && y < worldSize) {
 
                     Seminar temp = new Seminar(id, title, dateTime, length,
-                        (short)x, (short)y, cost, keywords, description);
+                        (short)x, (short)y, cost, keywordList
+                            .toArray(new String[0]), description);
                     controller.insertAllTrees(temp, output);
                 }
                 else {
@@ -98,16 +99,19 @@ public class CommandProcessor {
             case "delete":
                 int idDelete = oneLine.nextInt();
                 controller.delete(idDelete, output);
-                
+
                 oneLine.nextLine();
                 break;
             case "search":
+                // BST find works by matching a recrods key and seminar id
+                // but our input only searches something by a
+
                 // search is weird because it is ranges
                 String tree = oneLine.next().trim();
                 switch (tree) {
                     case "ID":
                         int idVal = oneLine.nextInt();
-                        controller.searchID(new Record<Integer>(idVal, null));
+                        controller.searchID(idVal, output);
 
                         break;
                     case "keyword":
@@ -117,39 +121,44 @@ public class CommandProcessor {
                     case "cost":
                         int low = oneLine.nextInt();
                         int high = oneLine.nextInt();
+                        controller.searchCost(low, high, output);
 
                         break;
                     case "date":
-                        int low_2 = oneLine.nextInt();
-                        int high_2 = oneLine.nextInt();
+                        String low_2 = oneLine.next();
+                        String high_2 = oneLine.next();
+                        controller.searchDate(low_2, high_2, output);
 
                         break;
 
                 }
-                oneLine.nextLine();
                 break;
             case "print":
-                
+
                 String treePrint = oneLine.nextLine().trim();
                 switch (treePrint) {
                     case "date":
+                        output.println("Date Tree:");
                         controller.printDate(output);
                         break;
 
                     case "keyword":
+                        output.println("Keyword Tree:");
                         controller.printKeyword(output);
                         break;
 
                     case "cost":
+                        output.println("Cost Tree:");
                         controller.printCost(output);
                         break;
 
                     case "ID":
+                        output.println("ID Tree:");
                         controller.printID(output);
                         break;
-                        
-//                    case "location":
-//                        controller.printLocation(output);
+
+// case "location":
+// controller.printLocation(output);
 
                 }
                 break;

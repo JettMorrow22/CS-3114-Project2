@@ -52,11 +52,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
         // check the children
         if (record.getKey().compareTo(cur.getRecord().getKey()) > 0) {
             cur.setRight(helpInsert(cur.getRight(), record)); // try
-                                                                // rightSubTree
+                                                              // rightSubTree
         }
         else { // this allows duplicates to the left subtree
             cur.setLeft(helpInsert(cur.getLeft(), record)); // try left
-                                                              // subTree
+                                                            // subTree
         }
 
         // return unchanged root node
@@ -65,7 +65,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 
     /**
-     * delete val from BST
+     * delete val from BST based of record
      * 
      * @param val
      *            key in record to be deleted
@@ -167,6 +167,46 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 
     /**
+     * method to return BSTNode just based off its key value in record
+     * 
+     * @param key
+     *            key value in record
+     * @return BSTNode that has key, or null if not found
+     */
+    public BSTNode<T> findFromKey(T key) {
+        return helpFindKey(root, key);
+    }
+
+
+    /**
+     * recursive funtion to find BSTNode based off a key
+     * 
+     * @param cur
+     *            node we are lookign at
+     * @param key
+     *            key
+     * @return BSTNode if found, null if not
+     */
+    private BSTNode<T> helpFindKey(BSTNode<T> cur, T key) {
+        if (cur == null) {
+            return null;
+        }
+
+        // search for node
+        int compare = key.compareTo(cur.getRecord().getKey());
+        if (compare < 0) {
+            return helpFindKey(cur.getLeft(), key);
+        }
+        else if (compare > 0) {
+            return helpFindKey(cur.getRight(), key);
+        }
+        else {
+            return cur;
+        }
+    }
+
+
+    /**
      * method to find a val in a BST
      * 
      * @param val
@@ -211,26 +251,39 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    // print
-    // print inorder transversal
-    // nodes are indented 4 spaces * their distance from the bottom (height -
-    // level) root is level 0
-    // left if above, and right is below
-    // also print null nodes
-    // height is always gonna be height + 1
-    // create string[]????
 
+    /**
+     * public method for printing tree
+     * 
+     * @param output
+     *            PrintWriter obj
+     */
     public void printTree(PrintWriter output) {
         inOrder(output, root, 0, getHeight(root));
+        if (numberOfNodes == 0) {
+            output.println("This tree is empty");
+        }
+        else {
+            output.println("Number of records: " + numberOfNodes);
+        }
     }
-    
+
+
     /**
      * recursive inorder transversal for BST
-     * @param output printwriter object
-     * @param cur the current node we are looking at
-     * @param level the level the cur node is at in the tree
+     * 
+     * @param output
+     *            printwriter object
+     * @param cur
+     *            the current node we are looking at
+     * @param level
+     *            the level the cur node is at in the tree
      */
-    private void inOrder(PrintWriter output, BSTNode<T> cur, int level, int height) {
+    private void inOrder(
+        PrintWriter output,
+        BSTNode<T> cur,
+        int level,
+        int height) {
         if (cur == null) {
             level--;
             return;
@@ -244,11 +297,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     /**
      * method to print to PrintWriter
-     * @param output PrintWriter object
-     * @param cur the node we are printing
-     * @param level the level of the tree we are at
+     * 
+     * @param output
+     *            PrintWriter object
+     * @param cur
+     *            the node we are printing
+     * @param level
+     *            the level of the tree we are at
      */
-    private void printNode(PrintWriter output, BSTNode<T> cur, int level, int height) {
+    private void printNode(
+        PrintWriter output,
+        BSTNode<T> cur,
+        int level,
+        int height) {
         // print left node
         if (cur.getLeft() == null) {
             output.println(" ".repeat((height - level - 1) * 4) + "(null)");
@@ -259,7 +320,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         // print node
         output.println(" ".repeat((height - level) * 4) + "(" + cur.getRecord()
-        .getKey() + ")");
+            .getKey() + ")");
 
         // print right stem
         output.println(" ".repeat((height - level) * 4) + "/");
@@ -268,6 +329,32 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if (cur.getRight() == null) {
             output.println(" ".repeat((height - level - 1) * 4) + "(null)");
         }
+    }
+
+
+    public int range(BSTNode<T> cur, T low, T high, PrintWriter output) {
+
+        if (cur == null) {
+            return 1;
+        }
+
+        // either within the range, below it, or above
+        int res = 0;
+        T val = cur.getRecord().getKey();
+        if (val.compareTo(low) < 0) { // less than low
+            res += range(cur.getLeft(), low, high, output);
+        }
+        else if (val.compareTo(high) > 0) { // greater than right
+            res += range(cur.getRight(), low, high, output);
+        }
+        else { // in the range
+               // just to string the seminar
+            output.println(cur.getRecord().getSem().toString());
+            //this node good so check left and right
+            res += 1 + range(cur.getLeft(), low, high, output) + range(cur
+                .getRight(), low, high, output);
+        }
+        return res;
     }
 
 
@@ -288,17 +375,21 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         return Math.max(left, right);
     }
-    
+
+
     /**
      * basic getter for root
-     * @return the root Node 
+     * 
+     * @return the root Node
      */
     public BSTNode<T> getRoot() {
         return root;
     }
-    
+
+
     /**
      * return numberOfNodes field
+     * 
      * @return numberOfNOdes
      */
     public int getNumberOfNodes() {

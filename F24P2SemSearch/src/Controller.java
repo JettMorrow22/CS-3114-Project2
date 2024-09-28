@@ -19,7 +19,8 @@ public class Controller {
     // insert only one method
     public void insertAllTrees(Seminar sem, PrintWriter output) {
 
-        if (searchID(new Record<Integer>(sem.id(), sem)) == null) {
+        // if we dont have record with id
+        if (idTree.findFromKey(sem.id()) == null) {
             // add to four bst
             idTree.insert(new Record<Integer>(sem.id(), sem));
             costTree.insert(new Record<Integer>(sem.cost(), sem));
@@ -39,13 +40,27 @@ public class Controller {
 
     }
 
+    // ----------------------------------------------------------------
+    // okay when deleting we are given a ID and we have to remove that seminar
+    // from all the other trees, \
+    // there can be duplicate cost, keyword, and date so we check seminar
+    // if we delete the id, then we get the seminar and easy
+
+    // what if I could find something just off its key
+
+    // delete something based off its id
+    // so find it in idTree to get record and sem, then use that record to
+    // delete it from other trees
 
     // delete
     // for delete we are only given a ID from the id we can get the seminar
+    // we need a way of getting the record just given id
+
+
     public void delete(int id, PrintWriter output) {
         // determine if there is a seminar that has the id
-        BSTNode<Integer> deletedNode = idTree.delete(new Record<Integer>(id,
-            null));
+        BSTNode<Integer> deletedNode = idTree.delete(idTree.findFromKey(id)
+            .getRecord());
         if (deletedNode != null) {
             // deletedNode gives us the seminar
             Seminar temp = deletedNode.getRecord().getSem();
@@ -60,11 +75,13 @@ public class Controller {
                 keywordTree.delete(r);
             }
             output.println("Record with ID " + id
-                + "successfully deleted from the database");
+                + " successfully deleted from the database");
         }
         else {
             // node does not exist
             // print method
+            output.println("Delete FAILED -- There is not record with ID "
+                + id);
         }
     }
 
@@ -76,32 +93,53 @@ public class Controller {
      *            id being searched
      * @return BSTNode that has the id & seminar or null
      */
-    public BSTNode<Integer> searchID(Record<Integer> id) {
-        return idTree.find(id);
+    public void searchID(int id, PrintWriter output) {
+        BSTNode<Integer> temp = idTree.findFromKey(id);
+        if (temp == null) {
+            // not found
+            output.println("Search FAILED -- There is no record with ID " + id);
+        }
+        else {
+            // found
+            output.println("Found record with ID " + id);
+            output.println(temp.getRecord().getSem().toString());
+        }
     }
 
 
     /**
-     * method to search costBST for cost
+     * method to search a range of costs
      * 
-     * @param cost
-     *            cost being searched
-     * @return BSTNode that has the cost & seminar or null
+     * @param low
+     *            low
+     * @param high
+     *            high
+     * @param output
+     *            output to print
      */
-    public BSTNode<Integer> searchCost(Record<Integer> cost) {
-        return costTree.find(cost);
+    public void searchCost(int low, int high, PrintWriter output) {
+        output.println("Seminars with costs in range " + low + " to " + high);
+        int nodes = costTree.range(costTree.getRoot(), low, high, output);
+        output.println(nodes + " nodes visited in this search");
+        
     }
 
 
     /**
-     * method to search dateBST for date
+     * method to search a range of dates
      * 
-     * @param date
-     *            date being searched
-     * @return BSTNode that has the date & seminar or null
+     * @param low
+     *            low
+     * @param high
+     *            high
+     * @param output
+     *            output to print
      */
-    public BSTNode<String> searchDate(Record<String> date) {
-        return dateTree.find(date);
+    public void searchDate(String low, String high, PrintWriter output) {
+        output.println("Seminars with dates in range " + low + " to " + high);
+        int nodes = dateTree.range(dateTree.getRoot(), low, high, output);
+        output.println(nodes + " nodes visited in this search");
+
     }
 
 
