@@ -19,6 +19,8 @@ public class CommandProcessor {
      * 
      * @param c
      *            the controller
+     * @param w
+     *            the worldSize
      */
     public CommandProcessor(Controller c, int w) {
         controller = c;
@@ -85,8 +87,8 @@ public class CommandProcessor {
                 if (x >= 0 && x < worldSize && y >= 0 && y < worldSize) {
 
                     Seminar temp = new Seminar(id, title, dateTime, length,
-                        (short)x, (short)y, cost, keywordList
-                            .toArray(new String[0]), description);
+                        (short)x, (short)y, cost, keywordList.toArray(
+                            new String[0]), description);
                     controller.insertAllTrees(temp, output);
                 }
                 else {
@@ -99,8 +101,8 @@ public class CommandProcessor {
             case "delete":
                 int idDelete = oneLine.nextInt();
                 controller.delete(idDelete, output);
-
                 oneLine.nextLine();
+
                 break;
             case "search":
                 // BST find works by matching a recrods key and seminar id
@@ -116,21 +118,20 @@ public class CommandProcessor {
                         break;
                     case "keyword":
                         String keyword = oneLine.next().trim();
+                        controller.searchKeyword(keyword, output);
 
                         break;
                     case "cost":
                         int low = oneLine.nextInt();
                         int high = oneLine.nextInt();
                         controller.searchCost(low, high, output);
-
                         break;
+
                     case "date":
-                        String low_2 = oneLine.next();
-                        String high_2 = oneLine.next();
-                        controller.searchDate(low_2, high_2, output);
-
+                        String low2 = oneLine.next();
+                        String high2 = oneLine.next();
+                        controller.searchDate(low2, high2, output);
                         break;
-
                 }
                 break;
             case "print":

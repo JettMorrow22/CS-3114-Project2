@@ -1,6 +1,7 @@
 ID Tree:
 This tree is empty
 Search FAILED -- There is no record with ID 1
+Seminars matching keyword VT:
 Insert FAILED - Bad x, y coordinates: -1, 10
 Insert FAILED - Bad x, y coordinates: 10, 128
 Successfully inserted record with ID 1
@@ -156,6 +157,19 @@ Cost Tree:
             (null)
 Number of records: 4
 Insert FAILED - There is already a record with ID 10
+Seminars matching keyword VT:
+ID: 10, Title: Computing Systems Research at VT
+Date: 0701250830, Length: 30, X: 30, Y: 10, Cost: 17
+Description: Seminar about the      Computing systems research at      VT
+Keywords: high_performance_computing, grids, VT, computer, science
+ID: 2, Title: Computational Biology and Bioinformatics in CS at Virginia Tech
+Date: 0610071600, Length: 60, X: 10, Y: 10, Cost: 30
+Description: Introduction to   bioinformatics and computation biology
+Keywords: Bioinformatics, computation_biology, Biology, Computer_Science, VT, Virginia_Tech
+ID: 1, Title: Overview of HCI Research at VT
+Date: 0610051600, Length: 90, X: 10, Y: 10, Cost: 45
+Description: This seminar will present an overview of HCI research at VT
+Keywords: HCI, Computer_Science, VT, Virginia_Tech
 Found record with ID 1
 ID: 1, Title: Overview of HCI Research at VT
 Date: 0610051600, Length: 90, X: 10, Y: 10, Cost: 45

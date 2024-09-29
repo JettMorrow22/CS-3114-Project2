@@ -42,7 +42,7 @@ public class BSTNodeTest extends TestCase {
      */
     public void testLeft() {
         assertNull(node.getLeft());
-        BSTNode temp = new BSTNode<>(record2);
+        BSTNode<Integer> temp = new BSTNode<>(record2);
         node.setLeft(temp);
         assertEquals(node.getLeft(), temp);
         
@@ -53,7 +53,7 @@ public class BSTNodeTest extends TestCase {
      */
     public void testRight() {
         assertNull(node.getRight());
-        BSTNode temp = new BSTNode<>(record2);
+        BSTNode<Integer> temp = new BSTNode<>(record2);
         node.setRight(temp);
         assertEquals(node.getRight(), temp);
         

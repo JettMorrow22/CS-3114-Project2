@@ -1,5 +1,12 @@
 import java.io.PrintWriter;
 
+/**
+ * controller class
+ * 
+ * @author Jett Morrow jettmorrow & Adam Schantz adams03
+ * 
+ * @version 9/24/2024
+ */
 public class Controller {
 
     private BinarySearchTree<Integer> idTree;
@@ -7,6 +14,12 @@ public class Controller {
     private BinarySearchTree<String> dateTree;
     private BinarySearchTree<String> keywordTree;
 
+    /**
+     * basis constructor for Controller initalizes BST
+     * 
+     * @param worldSize
+     *            worldSize
+     */
     public Controller(int worldSize) {
         idTree = new BinarySearchTree<>();
         costTree = new BinarySearchTree<>();
@@ -15,8 +28,14 @@ public class Controller {
     }
 
 
-    // now have method for
-    // insert only one method
+    /**
+     * inserts seminar into all of the BST
+     * 
+     * @param sem
+     *            Seminar
+     * @param output
+     *            Printwriter obj
+     */
     public void insertAllTrees(Seminar sem, PrintWriter output) {
 
         // if we dont have record with id
@@ -40,23 +59,15 @@ public class Controller {
 
     }
 
-    // ----------------------------------------------------------------
-    // okay when deleting we are given a ID and we have to remove that seminar
-    // from all the other trees, \
-    // there can be duplicate cost, keyword, and date so we check seminar
-    // if we delete the id, then we get the seminar and easy
 
-    // what if I could find something just off its key
-
-    // delete something based off its id
-    // so find it in idTree to get record and sem, then use that record to
-    // delete it from other trees
-
-    // delete
-    // for delete we are only given a ID from the id we can get the seminar
-    // we need a way of getting the record just given id
-
-
+    /**
+     * method to delete Seminar from all BST if it exists
+     * 
+     * @param id
+     *            id of the seminar
+     * @param output
+     *            PrintWriter obj
+     */
     public void delete(int id, PrintWriter output) {
         // determine if there is a seminar that has the id
         BSTNode<Integer> deletedNode = idTree.delete(idTree.findFromKey(id)
@@ -91,7 +102,8 @@ public class Controller {
      * 
      * @param id
      *            id being searched
-     * @return BSTNode that has the id & seminar or null
+     * @param output
+     *            PrintWriter obj
      */
     public void searchID(int id, PrintWriter output) {
         BSTNode<Integer> temp = idTree.findFromKey(id);
@@ -121,7 +133,7 @@ public class Controller {
         output.println("Seminars with costs in range " + low + " to " + high);
         int nodes = costTree.range(costTree.getRoot(), low, high, output);
         output.println(nodes + " nodes visited in this search");
-        
+
     }
 
 
@@ -144,14 +156,53 @@ public class Controller {
 
 
     /**
-     * method to search keywordBST for keyword
+     * method to search for multiple seminars with the keyword
+     * must be in order transversal
      * 
      * @param keyword
-     *            keyword being searched
-     * @return BSTNode that has the keyword & seminar or null
+     *            keyword
+     * @param output
+     *            Printwriter obj
      */
-    public BSTNode<String> searhKeyword(Record<String> keyword) {
-        return keywordTree.find(keyword);
+    public void searchKeyword(String keyword, PrintWriter output) {
+        // I have to inorder transversal this
+        output.println("Seminars matching keyword " + keyword + ":");
+        searchKeywordHelp(keywordTree.getRoot(), keyword, output);
+    }
+
+
+    /**
+     * recursive method for finding all the seminars with keyword in Seminar
+     * 
+     * @param cur
+     *            the current BSTNode we are at
+     * @param keyword
+     *            keyword
+     * @param output
+     *            PrintWriter obj
+     */
+    private void searchKeywordHelp(
+        BSTNode<String> cur,
+        String keyword,
+        PrintWriter output) {
+        if (cur == null) {
+            return;
+        }
+
+        // searches which subtree to look for
+        int compare = cur.getRecord().getKey().compareTo(keyword);
+        if (compare > 0) {
+            searchKeywordHelp(cur.getLeft(), keyword, output);
+        }
+        else if (compare < 0) {
+            searchKeywordHelp(cur.getRight(), keyword, output);
+        }
+        else {
+            // if found I check left subtree for duplicates
+            searchKeywordHelp(cur.getLeft(), keyword, output);
+            output.println(cur.getRecord().getSem().toString());
+        }
+
     }
 
 

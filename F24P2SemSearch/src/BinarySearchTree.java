@@ -25,7 +25,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * method to insert a val into the BST
      * 
-     * @param val
+     * @param record
+     *            record to be inserted
      */
     public void insert(Record<T> record) {
         root = helpInsert(root, record);
@@ -67,8 +68,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * delete val from BST based of record
      * 
-     * @param val
-     *            key in record to be deleted
+     * @param record
+     *            record to be deleted
      * @return the BSTNode<T> if removed, null if not
      */
     public BSTNode<T> delete(Record<T> record) {
@@ -209,8 +210,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * method to find a val in a BST
      * 
-     * @param val
-     *            the val being searched for
+     * @param record
+     *            record being searched for
      * @return null if not found, otherwise the node is returned
      */
     public BSTNode<T> find(Record<T> record) {
@@ -278,6 +279,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
      *            the current node we are looking at
      * @param level
      *            the level the cur node is at in the tree
+     * @param height
+     *            The height of teh BST
      */
     private void inOrder(
         PrintWriter output,
@@ -304,6 +307,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
      *            the node we are printing
      * @param level
      *            the level of the tree we are at
+     * @param height
+     *            The height of teh BST
      */
     private void printNode(
         PrintWriter output,
@@ -332,6 +337,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
 
+    /**
+     * method to determine the number of BSTNodes within the range low to high
+     * also prints the nodes and returns number of nodes in the range
+     * 
+     * @param cur
+     *            current BSTNode we are looking at
+     * @param low
+     *            low of range
+     * @param high
+     *            high of range
+     * @param output
+     *            PrintWriter obj
+     * @return the number of BSTNode in the range
+     */
     public int range(BSTNode<T> cur, T low, T high, PrintWriter output) {
 
         if (cur == null) {
@@ -350,7 +369,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else { // in the range
                // just to string the seminar
             output.println(cur.getRecord().getSem().toString());
-            //this node good so check left and right
+            // this node good so check left and right
             res += 1 + range(cur.getLeft(), low, high, output) + range(cur
                 .getRight(), low, high, output);
         }
