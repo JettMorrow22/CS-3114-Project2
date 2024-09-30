@@ -338,8 +338,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
 
     /**
-     * method to determine the number of BSTNodes within the range low to high
-     * also prints the nodes and returns number of nodes in the range
+     * method to return the number of nodes visited searching for the range low
+     * to high
      * 
      * @param cur
      *            current BSTNode we are looking at
@@ -349,7 +349,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      *            high of range
      * @param output
      *            PrintWriter obj
-     * @return the number of BSTNode in the range
+     * @return the number of BSTNode that were looked at
      */
     public int range(BSTNode<T> cur, T low, T high, PrintWriter output) {
 
@@ -368,12 +368,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         else { // in the range
                // just to string the seminar
-            // this node good so check left and right
+               // this node good so check left and right
             res++;
             res += range(cur.getLeft(), low, high, output);
             output.println(cur.getRecord().getSem().toString());
             res += range(cur.getRight(), low, high, output);
-            
+
         }
         return res;
     }

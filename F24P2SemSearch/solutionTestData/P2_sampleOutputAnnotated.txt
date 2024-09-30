@@ -1,4 +1,3 @@
-> World size: 128
 
 > print location
 Location Tree:
