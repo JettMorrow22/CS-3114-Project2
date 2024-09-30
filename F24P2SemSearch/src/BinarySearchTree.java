@@ -360,18 +360,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
         // either within the range, below it, or above
         int res = 0;
         T val = cur.getRecord().getKey();
-        if (val.compareTo(low) < 0) { // less than low
-            res += range(cur.getLeft(), low, high, output);
+        if (val.compareTo(low) < 0) { // less than low, so go right
+            res += 1 + range(cur.getRight(), low, high, output);
         }
-        else if (val.compareTo(high) > 0) { // greater than right
-            res += range(cur.getRight(), low, high, output);
+        else if (val.compareTo(high) > 0) { // greater than high, so go left
+            res += 1 + range(cur.getLeft(), low, high, output);
         }
         else { // in the range
                // just to string the seminar
-            output.println(cur.getRecord().getSem().toString());
             // this node good so check left and right
-            res += 1 + range(cur.getLeft(), low, high, output) + range(cur
-                .getRight(), low, high, output);
+            res++;
+            res += range(cur.getLeft(), low, high, output);
+            output.println(cur.getRecord().getSem().toString());
+            res += range(cur.getRight(), low, high, output);
+            
         }
         return res;
     }

@@ -109,11 +109,12 @@ public class Controller {
         BSTNode<Integer> temp = idTree.findFromKey(id);
         if (temp == null) {
             // not found
-            output.println("Search FAILED -- There is no record with ID " + id);
+            output.println("Search FAILED -- There is no record with ID "
+                + id);
         }
         else {
             // found
-            output.println("Found record with ID " + id);
+            output.println("Found record with ID " + id + ":");
             output.println(temp.getRecord().getSem().toString());
         }
     }
@@ -130,7 +131,8 @@ public class Controller {
      *            output to print
      */
     public void searchCost(int low, int high, PrintWriter output) {
-        output.println("Seminars with costs in range " + low + " to " + high);
+        output.println("Seminars with costs in range " + low + " to " + high
+            + ":");
         int nodes = costTree.range(costTree.getRoot(), low, high, output);
         output.println(nodes + " nodes visited in this search");
 
@@ -148,7 +150,8 @@ public class Controller {
      *            output to print
      */
     public void searchDate(String low, String high, PrintWriter output) {
-        output.println("Seminars with dates in range " + low + " to " + high);
+        output.println("Seminars with dates in range " + low + " to " + high
+            + ":");
         int nodes = dateTree.range(dateTree.getRoot(), low, high, output);
         output.println(nodes + " nodes visited in this search");
 
@@ -167,42 +170,7 @@ public class Controller {
     public void searchKeyword(String keyword, PrintWriter output) {
         // I have to inorder transversal this
         output.println("Seminars matching keyword " + keyword + ":");
-        searchKeywordHelp(keywordTree.getRoot(), keyword, output);
-    }
-
-
-    /**
-     * recursive method for finding all the seminars with keyword in Seminar
-     * 
-     * @param cur
-     *            the current BSTNode we are at
-     * @param keyword
-     *            keyword
-     * @param output
-     *            PrintWriter obj
-     */
-    private void searchKeywordHelp(
-        BSTNode<String> cur,
-        String keyword,
-        PrintWriter output) {
-        if (cur == null) {
-            return;
-        }
-
-        // searches which subtree to look for
-        int compare = cur.getRecord().getKey().compareTo(keyword);
-        if (compare > 0) {
-            searchKeywordHelp(cur.getLeft(), keyword, output);
-        }
-        else if (compare < 0) {
-            searchKeywordHelp(cur.getRight(), keyword, output);
-        }
-        else {
-            // if found I check left subtree for duplicates
-            searchKeywordHelp(cur.getLeft(), keyword, output);
-            output.println(cur.getRecord().getSem().toString());
-        }
-
+        keywordTree.range(keywordTree.getRoot(), keyword, keyword, output);
     }
 
 
