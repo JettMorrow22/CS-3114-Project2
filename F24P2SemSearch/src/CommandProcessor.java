@@ -89,7 +89,7 @@ public class CommandProcessor {
                     Seminar temp = new Seminar(id, title, dateTime, length,
                         (short)x, (short)y, cost, keywordList.toArray(
                             new String[0]), description);
-                    controller.insertAllTrees(temp, output);
+                    controller.insertAllTrees(temp, output); 
                 }
                 else {
                     // bad x and y
@@ -114,7 +114,7 @@ public class CommandProcessor {
                     case "ID":
                         int idVal = oneLine.nextInt();
                         controller.searchID(idVal, output);
-
+                        
                         break;
                     case "keyword":
                         String keyword = oneLine.next().trim();
@@ -133,6 +133,7 @@ public class CommandProcessor {
                         controller.searchDate(low2, high2, output);
                         break;
                 }
+                oneLine.nextLine();
                 break;
             case "print":
 
