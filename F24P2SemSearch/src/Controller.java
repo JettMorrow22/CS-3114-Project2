@@ -50,6 +50,8 @@ public class Controller {
                 keywordTree.insert(new Record<String>(s, sem));
             }
 
+            binTree.insert(sem);
+
             output.println("Successfully inserted record with ID " + sem.id());
             output.println(sem.toString());
         }
@@ -72,7 +74,7 @@ public class Controller {
      */
     public void delete(int id, PrintWriter output) {
         // determine if there is a seminar that has the id
-        
+
         BSTNode<Integer> foundNode = idTree.findFromKey(id);
 
         if (foundNode != null) {
@@ -95,8 +97,7 @@ public class Controller {
         else {
             // node does not exist
             // print method
-            output.println("Delete FAILED -- There is no record with ID "
-                + id);
+            output.println("Delete FAILED -- There is no record with ID " + id);
         }
     }
 
@@ -113,8 +114,7 @@ public class Controller {
         BSTNode<Integer> temp = idTree.findFromKey(id);
         if (temp == null) {
             // not found1
-            output.println("Search FAILED -- There is no record with ID "
-                + id);
+            output.println("Search FAILED -- There is no record with ID " + id);
         }
         else {
             // found
@@ -157,7 +157,7 @@ public class Controller {
         output.println("Seminars with dates in range " + low + " to " + high
             + ":");
         int nodes = dateTree.range(dateTree.getRoot(), low, high, output);
-        output.println(nodes + " nodes visited in this search");        
+        output.println(nodes + " nodes visited in this search");
 
     }
 
@@ -219,6 +219,17 @@ public class Controller {
      */
     public void printKeyword(PrintWriter output) {
         keywordTree.printTree(output);
+    }
+
+
+    /**
+     * method to print BinTree
+     * 
+     * @param output
+     *            PrintWriter obj
+     */
+    public void printLocation(PrintWriter output) {
+        binTree.printTree(output);
     }
 
 }

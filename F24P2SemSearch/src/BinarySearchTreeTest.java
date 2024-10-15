@@ -125,8 +125,8 @@ public class BinarySearchTreeTest extends TestCase {
         // only right child
         search.delete(rec5);
         assertTrue(3 == search.getNumberOfNodes());
-        
-        //only left child
+
+        // only left child
         search.insert(rec3);
         search.delete(rec3);
         assertTrue(3 == search.getNumberOfNodes());
@@ -193,36 +193,23 @@ public class BinarySearchTreeTest extends TestCase {
         PrintWriter pw = new PrintWriter(sw);
         bst.printTree(pw);
         pw.flush();
-        String output1 = 
-              "    (null)\r\n"
-            + "        \\\r\n"
-            + "        (5)\r\n"
-            + "        /\r\n"
-            + "(null)\r\n"
-            + "    \\\r\n"
-            + "    (7)\r\n"
-            + "    /\r\n"
-            + "(null)\r\n"
-            + "            \\\r\n"
-            + "            (10)\r\n"
-            + "            /\r\n"
-            + "    (null)\r\n"
-            + "        \\\r\n"
-            + "        (15)\r\n"
-            + "        /\r\n"
-            + "    (null)\r\n"
-            + "Number of records: 4\n";
-        
-        //remove all nodes for empty tree
+        String output1 = "    (null)\r\n" + "        \\\r\n" + "        (5)\r\n"
+            + "        /\r\n" + "(null)\r\n" + "    \\\r\n" + "    (7)\r\n"
+            + "    /\r\n" + "(null)\r\n" + "            \\\r\n"
+            + "            (10)\r\n" + "            /\r\n" + "    (null)\r\n"
+            + "        \\\r\n" + "        (15)\r\n" + "        /\r\n"
+            + "    (null)\r\n" + "Number of records: 4\n";
+
+        // remove all nodes for empty tree
         bst.delete(record1);
         bst.delete(record2);
         bst.delete(record3);
         bst.delete(record4);
         bst.printTree(pw);
-        
+
         output1 += "This tree is empty\n";
         assertEquals(output1, sw.toString());
-            
+
     }
 
 
