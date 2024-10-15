@@ -114,11 +114,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else {
             // key value is the same, check if seminar is the same
 
-            // leaf node
-            if (cur.getLeft() == null) {
+            
+            if (cur.getLeft() == null) { // no left child
                 return cur.getRight();
             }
-            else if (cur.getRight() == null) { // has only right child
+            else if (cur.getRight() == null) { //no right child
                 return cur.getLeft();
             }
             else {

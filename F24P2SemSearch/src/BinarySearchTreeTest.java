@@ -75,7 +75,10 @@ public class BinarySearchTreeTest extends TestCase {
         assertNotNull(bst.find(record2));
         assertNotNull(bst.find(record3));
         assertNotNull(bst.find(record4));
+
         assertEquals(4, bst.getNumberOfNodes());
+        assertTrue(4 == bst.getNumberOfNodes());
+
     }
 
 
@@ -100,22 +103,36 @@ public class BinarySearchTreeTest extends TestCase {
         bst.delete(record4);
         assertNull(bst.find(record4));
 
-// search.insert(record);
-// search.delete(record);
-// assertNull(search.find(record));
-// assertNull(search.delete(record));
-
         Record<Integer> rec1 = new Record<Integer>(6, sem);
         Record<Integer> rec2 = new Record<Integer>(4, sem);
+        Record<Integer> rec3 = new Record<Integer>(3, sem);
         Record<Integer> rec5 = new Record<Integer>(7, sem);
         Record<Integer> rec6 = new Record<Integer>(8, sem);
+
+        // delete from empty tree
+        assertNull(search.delete(null));
 
         search.insert(record);
         search.insert(rec2);
         search.insert(rec1);
         search.delete(rec1);
         assertNull(search.find(rec1));
+        assertTrue(2 == search.getNumberOfNodes());
+
+        search.insert(rec1);
+        search.insert(rec5);
+
+        // only right child
+        search.delete(rec5);
+        assertTrue(3 == search.getNumberOfNodes());
+        
+        //only left child
+        search.insert(rec3);
+        search.delete(rec3);
+        assertTrue(3 == search.getNumberOfNodes());
+
         search.delete(rec2);
+        assertTrue(2 == search.getNumberOfNodes());
         assertNull(search.find(rec2));
 
         search.insert(rec5);
@@ -130,14 +147,6 @@ public class BinarySearchTreeTest extends TestCase {
         String[] stringarr = new String[3];
         Seminar sem1 = new Seminar(15, "jett", "today", 5, xcoord, ycoord, 50,
             stringarr, "test");
-        // Seminar sem2 = new Seminar(16, "jett", "today", 5,
-        // xcoord, ycoord, 50, stringarr, "test");
-        Record<Integer> rec3 = new Record<Integer>(5, sem1);
-        // Record<Integer> rec4 = new Record<Integer>(5, sem1);
-
-        search.insert(rec3);
-        search.delete(rec3);
-        assertNull(search.find(rec3));
     }
 
 
@@ -172,6 +181,7 @@ public class BinarySearchTreeTest extends TestCase {
             new String[] { "none" }, "This seminar does not exist."));
         assertNull(bst.delete(nonExistentRecord)); // Trying to delete a
                                                    // non-existent record
+        assertTrue(4 == bst.getNumberOfNodes());
     }
 
 
@@ -182,11 +192,37 @@ public class BinarySearchTreeTest extends TestCase {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         bst.printTree(pw);
-        String output1 = sw.toString();
-        assertTrue(output1.contains("10")); // Check if tree contains root
-        assertTrue(output1.contains("5")); // Check if tree contains left child
-        assertTrue(output1.contains("15")); // Check if tree contains right
-                                            // child
+        pw.flush();
+        String output1 = 
+              "    (null)\r\n"
+            + "        \\\r\n"
+            + "        (5)\r\n"
+            + "        /\r\n"
+            + "(null)\r\n"
+            + "    \\\r\n"
+            + "    (7)\r\n"
+            + "    /\r\n"
+            + "(null)\r\n"
+            + "            \\\r\n"
+            + "            (10)\r\n"
+            + "            /\r\n"
+            + "    (null)\r\n"
+            + "        \\\r\n"
+            + "        (15)\r\n"
+            + "        /\r\n"
+            + "    (null)\r\n"
+            + "Number of records: 4\n";
+        
+        //remove all nodes for empty tree
+        bst.delete(record1);
+        bst.delete(record2);
+        bst.delete(record3);
+        bst.delete(record4);
+        bst.printTree(pw);
+        
+        output1 += "This tree is empty\n";
+        assertEquals(output1, sw.toString());
+            
     }
 
 
@@ -227,7 +263,13 @@ public class BinarySearchTreeTest extends TestCase {
      * test method for findFromKey
      */
     public void testFindFromKey() {
-        // Test finding an existing key
+
+        // test smaller existing key
+        BSTNode<Integer> smaller = bst.findFromKey(5);
+        assertNotNull(smaller);
+        assertTrue(5 == smaller.getRecord().getKey());
+
+        // Test greater than an existing key
         BSTNode<Integer> foundNode = bst.findFromKey(10);
         assertNotNull(foundNode);
         assertTrue(record1.getKey() == foundNode.getRecord().getKey());
@@ -263,7 +305,7 @@ public class BinarySearchTreeTest extends TestCase {
 
         // Check range that includes no nodes
         count = bst.range(bst.getRoot(), 20, 30, printWriter);
-        assertTrue(3 ==  count); // No nodes in this range
+        assertTrue(3 == count); // No nodes in this range
         assertEquals("", output2.toString()); // No output should be produced
     }
 }
