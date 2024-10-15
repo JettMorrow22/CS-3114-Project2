@@ -289,7 +289,7 @@ public class BinarySearchTreeTest extends TestCase {
 
         // Check range that includes some nodes
         int count = bst.range(bst.getRoot(), 5, 15, printWriter);
-        assertTrue(9 == count); // There are 7 nodes in the range
+        assertTrue(8 == count); // There are 7 nodes in the range
 
         printWriter.flush();
 

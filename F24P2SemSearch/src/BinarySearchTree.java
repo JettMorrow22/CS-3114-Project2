@@ -114,11 +114,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else {
             // key value is the same, check if seminar is the same
 
-            
             if (cur.getLeft() == null) { // no left child
                 return cur.getRight();
             }
-            else if (cur.getRight() == null) { //no right child
+            else if (cur.getRight() == null) { // no right child
                 return cur.getLeft();
             }
             else {
@@ -370,10 +369,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
                // just to string the seminar
                // this node good so check left and right
             res++;
+            // always check left, incase of duplicates
             res += range(cur.getLeft(), low, high, output);
             output.println(cur.getRecord().getSem().toString());
-            res += range(cur.getRight(), low, high, output);
-
+            //if we at high, do not check right subtree
+            if (val.compareTo(high) < 0) {
+                res += range(cur.getRight(), low, high, output);
+            }
         }
         return res;
     }

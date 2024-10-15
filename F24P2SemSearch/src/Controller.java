@@ -13,6 +13,7 @@ public class Controller {
     private BinarySearchTree<Integer> costTree;
     private BinarySearchTree<String> dateTree;
     private BinarySearchTree<String> keywordTree;
+    private BinTree binTree;
 
     /**
      * basis constructor for Controller initalizes BST
@@ -25,6 +26,7 @@ public class Controller {
         costTree = new BinarySearchTree<>();
         dateTree = new BinarySearchTree<>();
         keywordTree = new BinarySearchTree<>();
+        binTree = new BinTree(worldSize);
     }
 
 
@@ -70,13 +72,15 @@ public class Controller {
      */
     public void delete(int id, PrintWriter output) {
         // determine if there is a seminar that has the id
-        BSTNode<Integer> deletedNode = idTree.delete(idTree.findFromKey(id)
-            .getRecord());
-        if (deletedNode != null) {
+        
+        BSTNode<Integer> foundNode = idTree.findFromKey(id);
+
+        if (foundNode != null) {
             // deletedNode gives us the seminar
-            Seminar temp = deletedNode.getRecord().getSem();
+            Seminar temp = foundNode.getRecord().getSem();
 
             // create record with appriopriate key and this sem
+            idTree.delete(foundNode.getRecord());
             costTree.delete(new Record<Integer>(temp.cost(), temp));
             dateTree.delete(new Record<String>(temp.date(), temp));
             // delete all keywords from keywordTree
@@ -91,7 +95,7 @@ public class Controller {
         else {
             // node does not exist
             // print method
-            output.println("Delete FAILED -- There is not record with ID "
+            output.println("Delete FAILED -- There is no record with ID "
                 + id);
         }
     }
@@ -108,7 +112,7 @@ public class Controller {
     public void searchID(int id, PrintWriter output) {
         BSTNode<Integer> temp = idTree.findFromKey(id);
         if (temp == null) {
-            // not found
+            // not found1
             output.println("Search FAILED -- There is no record with ID "
                 + id);
         }
@@ -153,7 +157,7 @@ public class Controller {
         output.println("Seminars with dates in range " + low + " to " + high
             + ":");
         int nodes = dateTree.range(dateTree.getRoot(), low, high, output);
-        output.println(nodes + " nodes visited in this search");
+        output.println(nodes + " nodes visited in this search");        
 
     }
 
