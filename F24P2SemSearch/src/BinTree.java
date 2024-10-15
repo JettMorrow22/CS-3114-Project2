@@ -47,6 +47,29 @@ public class BinTree {
 
 
     /**
+     * Public method to delete BinTreeNode from binTree
+     * 
+     * @param sem
+     *            Seminar obj to be deleted
+     */
+    public void delete(Seminar sem) {
+        root = helpDelete(sem);
+    }
+
+
+    /**
+     * private recurisive method to remove binTreeNode from bin Tree
+     * 
+     * @param sem
+     *            Seminar obj to be removed
+     * @return new root of BinTree
+     */
+    private BinTreeNode helpDelete(Seminar sem) {
+        return root.delete(sem, 0, 0, worldSize, worldSize);
+    }
+
+
+    /**
      * Method to print the BinTree
      * 
      * @param output

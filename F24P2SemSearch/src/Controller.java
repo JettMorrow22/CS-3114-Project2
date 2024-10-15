@@ -91,6 +91,8 @@ public class Controller {
                 r.setKey(s);
                 keywordTree.delete(r);
             }
+            binTree.delete(temp);
+            
             output.println("Record with ID " + id
                 + " successfully deleted from the database");
         }

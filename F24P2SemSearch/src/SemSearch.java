@@ -30,14 +30,7 @@ import java.util.Scanner;
 // letter of this restriction.
 
 public class SemSearch {
-    
-    //Need to test
-    //Command Processor
-    //Controller
-    //BST
-    
-    
-    
+
     /**
      * @param args
      *            Command line parameters
@@ -106,13 +99,4 @@ public class SemSearch {
 
         return n == 1;
     }
-
-    // this is the main class
-    // this creates a command processor to read from the command file
-    // the CP has a controller class which holds the 5 trees
-    // I need BST and BSTNode Class
-    // I need record class
-
-    // BSTNode needs to be generic for different types of trees
-    // Record needs to be generic because it is data in BSTNode
 }

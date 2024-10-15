@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 import student.TestCase;
 
 /**
@@ -14,6 +15,7 @@ public class BinTreeTest extends TestCase {
     private Seminar three;
     private Seminar four;
     private Seminar five;
+    private PrintWriter output;
 
     /**
      * method to setup Seminars adn BinList
@@ -33,6 +35,7 @@ public class BinTreeTest extends TestCase {
         // keywords, "description");
 
         oneLeaf = new LeafNode(one);
+        output = new PrintWriter(System.out);
     }
 
 
@@ -41,7 +44,7 @@ public class BinTreeTest extends TestCase {
      */
     public void testInsert() {
         // empty binTree
-        assertEquals(FlyweightNode.get(), bin.getRoot());
+        assertEquals(FlyweightNode.get(), bin.getRoot()); 
         assertEquals(128, bin.getWorldSize());
 
         // insert sem one
@@ -102,5 +105,83 @@ public class BinTreeTest extends TestCase {
         assertEquals(((LeafNode)rightRoot.getLeft()).getSem(sameXY), sameXY);
 
         assertNull(((LeafNode)rightRoot.getLeft()).getSem(three));
+    }
+
+
+    /**
+     * test delete
+     */
+    public void testDelete() {
+        
+        
+        bin.insert(one);
+        bin.insert(two);
+        bin.insert(three);
+
+        bin.delete(one);
+        assertEquals(((InternalNode)bin.getRoot()).getRight(), FlyweightNode
+            .get());
+
+        bin.insert(one); // reset
+
+        bin.delete(two);
+        assertEquals(((LeafNode)((InternalNode)bin.getRoot()).getLeft()).getSem(
+            three), three);
+
+        bin.insert(two);
+        bin.delete(three);
+        assertEquals(((LeafNode)((InternalNode)bin.getRoot()).getLeft()).getSem(
+            two), two);
+
+        assertNull(FlyweightNode.get().delete(one, 0, 0, 0, 0));
+    }
+
+
+    /**
+     * test delete with duplicates
+     */
+    public void testDeleteDuplicates() {
+        
+        String[] keywords = { "Keyword" };
+        Seminar sameX = new Seminar(4, "title", "data", 4, (short)80, (short)70,
+            1, keywords, "description");
+        Seminar sameY = new Seminar(5, "title", "data", 5, (short)20, (short)30,
+            1, keywords, "description");
+        Seminar sameXY = new Seminar(6, "title", "data", 6, (short)80,
+            (short)30, 1, keywords, "description");
+        
+        Seminar dup2 = new Seminar(2, "title", "data", 6, (short)80,
+            (short)30, 1, keywords, "description");
+        Seminar dup3 = new Seminar(3, "title", "data", 6, (short)80,
+            (short)30, 1, keywords, "description");
+        Seminar dup4 = new Seminar(4, "title", "data", 6, (short)80,
+            (short)30, 1, keywords, "description");
+
+        bin.insert(one);
+        bin.insert(sameX);
+        bin.insert(sameY);
+        bin.insert(sameXY);
+        bin.printTree(output);
+        output.flush();
+
+        InternalNode rightRoot = (InternalNode)((InternalNode)bin.getRoot())
+            .getRight();
+
+        bin.delete(sameXY);
+        bin.printTree(output);
+        output.flush();
+        assertNull(((LeafNode)rightRoot.getLeft()).getSem(sameXY));
+        assertEquals(((LeafNode)rightRoot.getLeft()).getSem(one), one);
+        
+        bin.insert(sameXY);
+        bin.insert(dup2);
+        bin.insert(dup3);
+        bin.insert(dup4);
+        bin.printTree(output);
+        output.flush();
+        
+        bin.delete(dup3);
+        bin.printTree(output);
+        output.flush();
     }
 }

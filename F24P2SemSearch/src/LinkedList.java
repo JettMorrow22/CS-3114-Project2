@@ -36,7 +36,7 @@ public class LinkedList {
         else { // temp goes in the middle of the list
             LLNode cur = head;
             while (cur.getNext() != null && cur.getNext().getSeminar()
-                .id() > temp.getSeminar().id()) {
+                .id() <= temp.getSeminar().id()) {
                 cur = cur.getNext();
             }
             

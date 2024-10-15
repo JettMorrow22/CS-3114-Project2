@@ -22,5 +22,13 @@ public class SemSearchTest extends TestCase {
         assertNotNull(sem);
         SemSearch.main(null);
     }
+    
+    /**
+     * test with null args
+     */
+    public void testNull() {
+        String[] args = null;
+        SemSearch.main(args);
+    }
 }
 
