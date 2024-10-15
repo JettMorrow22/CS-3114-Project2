@@ -372,7 +372,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             // always check left, incase of duplicates
             res += range(cur.getLeft(), low, high, output);
             output.println(cur.getRecord().getSem().toString());
-            //if we at high, do not check right subtree
+            // if we at high, do not check right subtree
             if (val.compareTo(high) < 0) {
                 res += range(cur.getRight(), low, high, output);
             }
