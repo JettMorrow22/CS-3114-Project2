@@ -24,6 +24,7 @@ public interface BinTreeNode {
      * @param x
      * @param y
      * @param radius
+     * @param bx the 
      * @return the number of nodes visited
      */
     public int search(int x, int y, int radius, int bx, int by, int width,
