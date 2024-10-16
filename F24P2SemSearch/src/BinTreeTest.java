@@ -217,9 +217,5 @@ public class BinTreeTest extends TestCase {
         
         b2.insert(x2y2);
         assertEquals(7, b2.search(2, 2, 1, output));
-<<<<<<< HEAD
-=======
-        
->>>>>>> branch 'master' of https://github.com/JettMorrow22/CS-3114-Project2.git
     }
 }

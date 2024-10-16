@@ -152,7 +152,7 @@ public class InternalNode implements BinTreeNode {
                 return 1 + getLeft().search(x, y, radius, bx, by, width, height,
                     output);
             }
-            else if (boundingTopLeftX > bx + width) { // greater than or equal
+            else if (boundingTopLeftX >= bx + width) { // greater than or equal
                 return 1 + getRight().search(x, y, radius, bx + width, by,
                     width, height, output);
             }
@@ -170,7 +170,7 @@ public class InternalNode implements BinTreeNode {
                 return 1 + getLeft().search(x, y, radius, bx, by, width, height,
                     output);
             }
-            else if (boundingTopLeftY > by + height) { // below it
+            else if (boundingTopLeftY >= by + height) { // below it
                 return 1 + getRight().search(x, y, radius, bx, by + height,
                     width, height, output);
             }
@@ -180,6 +180,9 @@ public class InternalNode implements BinTreeNode {
                         width, height, output);
             }
         }
+        
+        //line should be just right
+        //over searching internal nodes
     }
 
 
