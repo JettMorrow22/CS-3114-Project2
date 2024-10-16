@@ -92,7 +92,7 @@ public class Controller {
                 keywordTree.delete(r);
             }
             binTree.delete(temp);
-            
+
             output.println("Record with ID " + id
                 + " successfully deleted from the database");
         }
@@ -179,22 +179,28 @@ public class Controller {
         keywordTree.range(keywordTree.getRoot(), keyword, keyword, output);
     }
 
+
     /**
      * searchLocation method, use initial location and radius
-     * @param x the x coordinate
-     * @param y the y coordinate
-     * @param radius the radius of how far we want to search
-     * @param output Printwriter obj
+     * 
+     * @param x
+     *            the x coordinate
+     * @param y
+     *            the y coordinate
+     * @param radius
+     *            the radius of how far we want to search
+     * @param output
+     *            Printwriter obj
      */
-    public void searchLocation(int x, int y, int radius, PrintWriter output)
-    {
-        output.println("Seminars within " + radius + " units of " + x +
-            ", " + y + ":");
+    public void searchLocation(int x, int y, int radius, PrintWriter output) {
+        output.println("Seminars within " + radius + " units of " + x + ", " + y
+            + ":");
         int nodes = binTree.search(x, y, radius, output);
-        //need to fix syntax
-        //call bintree search method with x, y, and radius
-        
+        // need to fix syntax
+        // call bintree search method with x, y, and radius
+        output.println(nodes + " visited in this search");
     }
+
 
     /**
      * method to print idBST

@@ -93,6 +93,8 @@ public class FlyweightNode implements BinTreeNode {
      *            width of bin tree
      * @param height
      *            height of bin tree
+     * @param output
+     *            Printwriter obj
      * @return the nodes visited always one in flywiehgt
      */
     @Override
