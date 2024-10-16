@@ -188,13 +188,12 @@ public class BinTree {
      * @param radius of how far we want to search
      * @return records within radius
      */
-    public int search(int x, int y, int radius)
+    public int search(int x, int y, int radius, PrintWriter output)
     {
         //need to get the number of records within the radius, and track how 
         //many nodes were visited
         //create a boundary box?
-        //return root.search(x, y, radius);
-        return 0;
+        return root.search(x, y, radius, 0, 0, worldSize, worldSize, output);
     }
     
     /**

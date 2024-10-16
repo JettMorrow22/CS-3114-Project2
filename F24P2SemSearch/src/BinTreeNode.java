@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * Interface for leafnode, internal node, and flyweightnode
  * 
@@ -32,7 +34,7 @@ public interface BinTreeNode {
      * @return the number of nodes visited
      */
     public int search(int x, int y, int radius, int bx, int by, int width,
-        int height);
+        int height, PrintWriter output);
     
 
     /**

@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 
 /**
  * Internal Node class
@@ -138,7 +139,8 @@ public class InternalNode implements BinTreeNode {
         int bx,
         int by,
         int width,
-        int height) {
+        int height,
+        PrintWriter output) {
 
         int boundingTopLeftX = x - radius;
         int boundingTopLeftY = y - radius;
@@ -147,14 +149,16 @@ public class InternalNode implements BinTreeNode {
             width = width / 2;
             // box is completely less than discriminator
             if (boundingTopLeftX + radius + radius <= bx) {
-                return 1 + search(x, y, radius, bx, by, width, height);
+                return 1 + search(x, y, radius, bx, by, width, height, output);
             }
             else if (boundingTopLeftX >= bx) { // greater than or equal
-                return 1 + search(x, y, radius, bx + width, by, width, height);
+                return 1 + search(x, y, radius, bx + width, by, width, height,
+                    output);
             }
             else { // in the middle (go left and right)
-                return 1 + search(x, y, radius, bx, by, width, height) + search(
-                    x, y, radius, bx + width, by, width, height);
+                return 1 + search(x, y, radius, bx, by, width, height, output)
+                    + search(x, y, radius, bx + width, by, width, height,
+                        output);
             }
 
         }
@@ -163,14 +167,16 @@ public class InternalNode implements BinTreeNode {
             height = height / 2;
             // above it
             if (boundingTopLeftY + radius + radius <= by) {
-                return 1 + search(x, y, radius, bx, by, width, height);
+                return 1 + search(x, y, radius, bx, by, width, height, output);
             }
             else if (boundingTopLeftY >= by) { // below it
-                return 1 + search(x, y, radius, bx, by + height, width, height);
+                return 1 + search(x, y, radius, bx, by + height, width, height,
+                    output);
             }
             else { // both
-                return 1 + search(x, y, radius, bx, by, width, height) + search(
-                    x, y, radius, bx, by + height, width, height);
+                return 1 + search(x, y, radius, bx, by, width, height, output)
+                    + search(x, y, radius, bx, by + height, width, height,
+                        output);
             }
         }
     }

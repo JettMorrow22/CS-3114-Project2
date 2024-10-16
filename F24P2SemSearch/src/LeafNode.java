@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * LeafNode class
  * 
@@ -132,8 +134,9 @@ public class LeafNode implements BinTreeNode {
         int bx,
         int by,
         int width,
-        int height) {
+        int height,
+        PrintWriter output) {
         // TODO Auto-generated method stub
-        return 0;
+        return 1;
     }
 }

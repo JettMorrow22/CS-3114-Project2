@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * FlyweightNode class
  * 
@@ -101,7 +103,8 @@ public class FlyweightNode implements BinTreeNode {
         int bx,
         int by,
         int width,
-        int height) {
+        int height,
+        PrintWriter output) {
 
         return 1;
     }
