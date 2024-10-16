@@ -198,7 +198,7 @@ public class Controller {
         int nodes = binTree.search(x, y, radius, output);
         // need to fix syntax
         // call bintree search method with x, y, and radius
-        output.println(nodes + " visited in this search");
+        output.println(nodes + " nodes visited in this search");
     }
 
 

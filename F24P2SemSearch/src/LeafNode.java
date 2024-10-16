@@ -131,15 +131,12 @@ public class LeafNode implements BinTreeNode {
         int
         search(int x, int y, int radius, int bx, int by, int width, int height, PrintWriter output)
     {
-        int count = 0;
         LinkedList.LLNode cur = seminars.getHead();
         while(cur != null)
         {
             Seminar seminar = cur.getSeminar();
             if ((withinRange(x, y, radius, seminar.x(), seminar.y())))
                 {
-                    //increment count
-                    count++;
                     //print the seminar
                     output.println("Found a record with key value " +  
                     seminar.id() + " at " + seminar.x() + ", " + seminar.y());
@@ -147,7 +144,7 @@ public class LeafNode implements BinTreeNode {
             cur = cur.getNext();
         }
         
-        return count;
+        return 1;
     }
     /**
      * helper method for search
