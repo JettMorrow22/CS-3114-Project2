@@ -1,17 +1,16 @@
+import java.io.PrintWriter;
+
 /**
  * FlyweightNode class
  * 
  * @author Jett Morrow jettmorrow & Adam Schantz adams03
  * @version 10/14/2024
  */
-public class FlyweightNode
-    implements BinTreeNode
-{
+public class FlyweightNode implements BinTreeNode {
 
     private static final FlyweightNode FLYWEIGHT = new FlyweightNode();
 
-    private FlyweightNode()
-    {
+    private FlyweightNode() {
         // does nothing but ensures no flyweightnodes are ever created
     }
 
@@ -21,8 +20,7 @@ public class FlyweightNode
      * 
      * @return FLYWEIGHT
      */
-    public static FlyweightNode get()
-    {
+    public static FlyweightNode get() {
         return FLYWEIGHT;
     }
 
@@ -42,8 +40,12 @@ public class FlyweightNode
      * @return a new leaf node with the seminar obj
      */
     @Override
-    public BinTreeNode insert(Seminar sem, int x, int y, int width, int height)
-    {
+    public BinTreeNode insert(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
         // if we ever reach flyweight Node we can create insert a leafNode
         return new LeafNode(sem);
     }
@@ -64,18 +66,46 @@ public class FlyweightNode
      * @return null because it is never called
      */
     @Override
-    public BinTreeNode delete(Seminar sem, int x, int y, int width, int height)
-    {
+    public BinTreeNode delete(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
         return null;
     }
 
 
+    /**
+     * nothind done with leaf node, just return one since it is visited
+     * 
+     * @param x
+     *            x of search
+     * @param y
+     *            y of search
+     * @param radius
+     *            radius of search
+     * @param bx
+     *            x of where we are in the bin tree
+     * @param by
+     *            y of where we are in the bin tree
+     * @param width
+     *            width of bin tree
+     * @param height
+     *            height of bin tree
+     * @return the nodes visited always one in flywiehgt
+     */
     @Override
-    public
-        int
-        search(int x, int y, int radius, int bx, int by, int width, int height)
-    {
-     
+    public int search(
+        int x,
+        int y,
+        int radius,
+        int bx,
+        int by,
+        int width,
+        int height,
+        PrintWriter output) {
+
         return 1;
     }
 

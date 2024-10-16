@@ -1,3 +1,4 @@
+import java.io.PrintWriter;
 
 /**
  * Internal Node class
@@ -5,15 +6,17 @@
  * @author Jett Morrow jettmorrow & Adam Schantz adams03
  * @version 10/14/2024
  */
-public class InternalNode implements BinTreeNode {
+public class InternalNode
+    implements BinTreeNode
+{
     private BinTreeNode left;
     private BinTreeNode right;
 
     /**
-     * Constructor for InternalNode
-     * initializes left and right to flyweight node
+     * Constructor for InternalNode initializes left and right to flyweight node
      */
-    public InternalNode() {
+    public InternalNode()
+    {
         left = FlyweightNode.get();
         right = FlyweightNode.get();
     }
@@ -24,7 +27,8 @@ public class InternalNode implements BinTreeNode {
      * 
      * @return Left
      */
-    public BinTreeNode getLeft() {
+    public BinTreeNode getLeft()
+    {
         return left;
     }
 
@@ -34,7 +38,8 @@ public class InternalNode implements BinTreeNode {
      * 
      * @return Right
      */
-    public BinTreeNode getRight() {
+    public BinTreeNode getRight()
+    {
         return right;
     }
 
@@ -45,7 +50,8 @@ public class InternalNode implements BinTreeNode {
      * @param left
      *            new Left for BinTreeNode
      */
-    public void setLeft(BinTreeNode left) {
+    public void setLeft(BinTreeNode left)
+    {
         this.left = left;
     }
 
@@ -56,7 +62,8 @@ public class InternalNode implements BinTreeNode {
      * @param right
      *            new Right BinTreeNode
      */
-    public void setRight(BinTreeNode right) {
+    public void setRight(BinTreeNode right)
+    {
         this.right = right;
     }
 
@@ -73,35 +80,36 @@ public class InternalNode implements BinTreeNode {
      * @param width
      *            width of the box
      * @parma height height of the box
-     * 
      * @return BinTreeNode determines if the seminar should go to left or right
      */
     @Override
-    public BinTreeNode insert(
-        Seminar sem,
-        int x,
-        int y,
-        int width,
-        int height) {
+    public BinTreeNode insert(Seminar sem, int x, int y, int width, int height)
+    {
         // x is the discriminator
-        if (width == height) {
+        if (width == height)
+        {
             width = width / 2;
             // should it go to left or right
-            if (sem.x() < x + width) {
+            if (sem.x() < x + width)
+            {
                 setLeft(getLeft().insert(sem, x, y, width, height));
             }
-            else {
+            else
+            {
                 setRight(getRight().insert(sem, x + width, y, width, height));
             }
 
         }
-        else { // y is the discriminator
+        else
+        { // y is the discriminator
             height = height / 2;
 
-            if (sem.y() < y + height) {
+            if (sem.y() < y + height)
+            {
                 setLeft(getLeft().insert(sem, x, y, width, height));
             }
-            else {
+            else
+            {
                 setRight(getRight().insert(sem, x, y + height, width, height));
             }
         }
@@ -111,23 +119,11 @@ public class InternalNode implements BinTreeNode {
     }
 
 
-    @Override
-    public int search(int x, int y, int radius, int bx, int by, int width, 
-        int height) 
-    {
-        //do we want to search the left subtree
-        if (width == height)
-        {
-            width = width / 2;
-            
-        }
-        return radius;
-    }
-    
     /**
-     * whether or not an internal node should be visited
-     * we need the box containing the node
+     * internal nodes determines which nodes we should search
+     * 
      * @param x
+     *            x of search
      * @param y
      * @param r
      * @param bx the x coord
@@ -135,17 +131,70 @@ public class InternalNode implements BinTreeNode {
      * @param width of world
      * @param height of world
      * @return whether or not we need to check the internal node
+     *            y of search
+     * @param radius
+     *            radius of search
+     * @param bx
+     *            x of where we are in the bin tree
+     * @param by
+     *            y of where we are in the bin tree
+     * @param width
+     *            width of bin tree
+     * @param height
+     *            height of bin tree
+     * @return the nodes visited in the search
      */
-    public boolean withinBox(int x, int y, int r, int bx, 
-        int by, int width, int height)
-    {
-        int ax = x-1;
-        int ay = y-1;
-        int w = 2*r + 1;
-        int h = 2*r + 1;
-        //if ()
-        return true;
+    @Override
+    public int search(
+        int x,
+        int y,
+        int radius,
+        int bx,
+        int by,
+        int width,
+        int height,
+        PrintWriter output) {
+
+        int boundingTopLeftX = x - radius;
+        int boundingTopLeftY = y - radius;
+        if (width == height) {
+            // x is discriminator
+            width = width / 2;
+            // box is completely less than discriminator
+            if (boundingTopLeftX + radius + radius <= bx) {
+                return 1 + search(x, y, radius, bx, by, width, height, output);
+            }
+            else if (boundingTopLeftX >= bx) { // greater than or equal
+                return 1 + search(x, y, radius, bx + width, by, width, height,
+                    output);
+            }
+            else { // in the middle (go left and right)
+                return 1 + search(x, y, radius, bx, by, width, height, output)
+                    + search(x, y, radius, bx + width, by, width, height,
+                        output);
+            }
+
+        }
+        else {
+            // y is discriminator\
+            height = height / 2;
+            // above it
+            if (boundingTopLeftY + radius + radius <= by) {
+                return 1 + search(x, y, radius, bx, by, width, height, output);
+            }
+            else if (boundingTopLeftY >= by) { // below it
+                return 1 + search(x, y, radius, bx, by + height, width, height,
+                    output);
+            }
+            else { // both
+                return 1 + search(x, y, radius, bx, by, width, height, output)
+                    + search(x, y, radius, bx, by + height, width, height,
+                        output);
+            }
+        }
     }
+
+
     /**
      * delete method for Internal Node
      * 
@@ -158,45 +207,47 @@ public class InternalNode implements BinTreeNode {
      * @param width
      *            width of the box
      * @parma height height of the box
-     * 
-     * @return returns its self it it has two leaf node children
-     *         returns leaf node if one child is leaf and the other is
-     *         flyweightNode
+     * @return returns its self it it has two leaf node children returns leaf
+     *             node if one child is leaf and the other is flyweightNode
      */
     @Override
-    public BinTreeNode delete(
-        Seminar sem,
-        int x,
-        int y,
-        int width,
-        int height) {
+    public BinTreeNode delete(Seminar sem, int x, int y, int width, int height)
+    {
 
-        if (width == height) {
+        if (width == height)
+        {
             width = width / 2;
-            if (sem.x() < x + width) {
+            if (sem.x() < x + width)
+            {
                 setLeft(getLeft().delete(sem, x, y, width, height));
             }
-            else {
+            else
+            {
                 setRight(getRight().delete(sem, x + width, y, width, height));
             }
         }
-        else {
+        else
+        {
             height = height / 2;
-            if (sem.y() < y + height) {
+            if (sem.y() < y + height)
+            {
                 setLeft(getLeft().delete(sem, x, y, width, height));
             }
-            else {
+            else
+            {
                 setRight(getRight().delete(sem, x, y + height, width, height));
             }
         }
 
         // if one child is fly and other is leaf then return that leaf other
         if (getLeft().getClass() == LeafNode.class
-            && getRight() == FlyweightNode.get()) {
+            && getRight() == FlyweightNode.get())
+        {
             return getLeft();
         }
-        else if (getLeft() == FlyweightNode.get() && getRight()
-            .getClass() == LeafNode.class) {
+        else if (getLeft() == FlyweightNode.get()
+            && getRight().getClass() == LeafNode.class)
+        {
             return getRight();
         }
         return this;

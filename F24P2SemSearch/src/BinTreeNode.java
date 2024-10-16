@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * Interface for leafnode, internal node, and flyweightnode
  * 
@@ -32,15 +34,8 @@ public interface BinTreeNode {
      * @return the number of nodes visited
      */
     public int search(int x, int y, int radius, int bx, int by, int width,
-        int height);
+        int height, PrintWriter output);
     
-    /**
-     * helper method for determining if a node is within a boundary box
-     * @param ax the box's xcoord
-     * @param ay the box's ycoord
-     * @param bx the node's xcoord
-     * @param by the node's ycoord
-     */
 
     /**
      * delete method for all BinTreeNodes

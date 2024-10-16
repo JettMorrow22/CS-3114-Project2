@@ -1,3 +1,5 @@
+import java.io.PrintWriter;
+
 /**
  * LeafNode class
  * 
@@ -89,6 +91,7 @@ public class LeafNode implements BinTreeNode {
         return temp;
     }
 
+
     /**
      * Delete method for LeafNode
      * 
@@ -126,7 +129,7 @@ public class LeafNode implements BinTreeNode {
     @Override
     public
         int
-        search(int x, int y, int radius, int bx, int by, int width, int height)
+        search(int x, int y, int radius, int bx, int by, int width, int height, PrintWriter output)
     {
         int count = 0;
         LinkedList.LLNode cur = seminars.getHead();

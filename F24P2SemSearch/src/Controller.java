@@ -188,9 +188,9 @@ public class Controller {
      */
     public void searchLocation(int x, int y, int radius, PrintWriter output)
     {
-        output.println("Seminars within " + radius + " of coordinates " + x +
-            "," + y + ":");
-        binTree.search(x, y, radius);
+        output.println("Seminars within " + radius + " units of " + x +
+            ", " + y + ":");
+        int nodes = binTree.search(x, y, radius, output);
         //need to fix syntax
         //call bintree search method with x, y, and radius
         
