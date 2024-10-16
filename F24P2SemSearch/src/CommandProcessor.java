@@ -99,16 +99,13 @@ public class CommandProcessor {
 
                 break;
             case "delete":
+                
                 int idDelete = oneLine.nextInt();
                 controller.delete(idDelete, output);
                 oneLine.nextLine();
-
                 break;
             case "search":
-                // BST find works by matching a recrods key and seminar id
-                // but our input only searches something by a
 
-                // search is weird because it is ranges
                 String tree = oneLine.next().trim();
                 switch (tree) {
                     case "ID":
@@ -136,7 +133,8 @@ public class CommandProcessor {
                         int xcoord = oneLine.nextInt();
                         int ycoord = oneLine.nextInt();
                         int radius = oneLine.nextInt();
-                        controller.searchLocation(xcoord, ycoord, radius, output);
+                        controller.searchLocation(xcoord, ycoord, radius,
+                            output);
                         break;
                 }
                 oneLine.nextLine();
