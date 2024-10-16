@@ -4,8 +4,8 @@ import java.nio.file.Paths;
 import student.TestCase;
 
 /**
- * @author {Your Name Here}
- * @version {Put Something Here}
+ * @author adam schantz
+ * @version test cases
  */
 public class ProblemSpecTest extends TestCase {
     /**
@@ -58,6 +58,7 @@ public class ProblemSpecTest extends TestCase {
         // Compare the two outputs
         // once you have implemented your project
         assertFuzzyEquals(expectedOutput, actualOutput);
+
     }
 
 
@@ -86,6 +87,6 @@ public class ProblemSpecTest extends TestCase {
 
         // Compare the two outputs
         // once you have implemented your project
-        //assertFuzzyEquals(expectedOutput, actualOutput);
+        assertFuzzyEquals(expectedOutput, actualOutput);
     }
 }
