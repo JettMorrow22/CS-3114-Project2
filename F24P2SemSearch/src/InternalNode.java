@@ -6,17 +6,14 @@ import java.io.PrintWriter;
  * @author Jett Morrow jettmorrow & Adam Schantz adams03
  * @version 10/14/2024
  */
-public class InternalNode
-    implements BinTreeNode
-{
+public class InternalNode implements BinTreeNode {
     private BinTreeNode left;
     private BinTreeNode right;
 
     /**
      * Constructor for InternalNode initializes left and right to flyweight node
      */
-    public InternalNode()
-    {
+    public InternalNode() {
         left = FlyweightNode.get();
         right = FlyweightNode.get();
     }
@@ -27,8 +24,7 @@ public class InternalNode
      * 
      * @return Left
      */
-    public BinTreeNode getLeft()
-    {
+    public BinTreeNode getLeft() {
         return left;
     }
 
@@ -38,8 +34,7 @@ public class InternalNode
      * 
      * @return Right
      */
-    public BinTreeNode getRight()
-    {
+    public BinTreeNode getRight() {
         return right;
     }
 
@@ -50,8 +45,7 @@ public class InternalNode
      * @param left
      *            new Left for BinTreeNode
      */
-    public void setLeft(BinTreeNode left)
-    {
+    public void setLeft(BinTreeNode left) {
         this.left = left;
     }
 
@@ -62,8 +56,7 @@ public class InternalNode
      * @param right
      *            new Right BinTreeNode
      */
-    public void setRight(BinTreeNode right)
-    {
+    public void setRight(BinTreeNode right) {
         this.right = right;
     }
 
@@ -83,33 +76,31 @@ public class InternalNode
      * @return BinTreeNode determines if the seminar should go to left or right
      */
     @Override
-    public BinTreeNode insert(Seminar sem, int x, int y, int width, int height)
-    {
+    public BinTreeNode insert(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
         // x is the discriminator
-        if (width == height)
-        {
+        if (width == height) {
             width = width / 2;
             // should it go to left or right
-            if (sem.x() < x + width)
-            {
+            if (sem.x() < x + width) {
                 setLeft(getLeft().insert(sem, x, y, width, height));
             }
-            else
-            {
+            else {
                 setRight(getRight().insert(sem, x + width, y, width, height));
             }
 
         }
-        else
-        { // y is the discriminator
+        else { // y is the discriminator
             height = height / 2;
 
-            if (sem.y() < y + height)
-            {
+            if (sem.y() < y + height) {
                 setLeft(getLeft().insert(sem, x, y, width, height));
             }
-            else
-            {
+            else {
                 setRight(getRight().insert(sem, x, y + height, width, height));
             }
         }
@@ -123,15 +114,9 @@ public class InternalNode
      * internal nodes determines which nodes we should search
      * 
      * @param x
-     *            x of search
+     *            x of seminar
      * @param y
-     * @param r
-     * @param bx the x coord
-     * @param by the y coord
-     * @param width of world
-     * @param height of world
-     * @return whether or not we need to check the internal node
-     *            y of search
+     *            y of seminar
      * @param radius
      *            radius of search
      * @param bx
@@ -141,7 +126,9 @@ public class InternalNode
      * @param width
      *            width of bin tree
      * @param height
-     *            height of bin tree
+     *            height of bin tree\
+     * @param output
+     *            Printwriter output
      * @return the nodes visited in the search
      */
     @Override
@@ -208,46 +195,42 @@ public class InternalNode
      *            width of the box
      * @parma height height of the box
      * @return returns its self it it has two leaf node children returns leaf
-     *             node if one child is leaf and the other is flyweightNode
+     *         node if one child is leaf and the other is flyweightNode
      */
     @Override
-    public BinTreeNode delete(Seminar sem, int x, int y, int width, int height)
-    {
+    public BinTreeNode delete(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
 
-        if (width == height)
-        {
+        if (width == height) {
             width = width / 2;
-            if (sem.x() < x + width)
-            {
+            if (sem.x() < x + width) {
                 setLeft(getLeft().delete(sem, x, y, width, height));
             }
-            else
-            {
+            else {
                 setRight(getRight().delete(sem, x + width, y, width, height));
             }
         }
-        else
-        {
+        else {
             height = height / 2;
-            if (sem.y() < y + height)
-            {
+            if (sem.y() < y + height) {
                 setLeft(getLeft().delete(sem, x, y, width, height));
             }
-            else
-            {
+            else {
                 setRight(getRight().delete(sem, x, y + height, width, height));
             }
         }
 
         // if one child is fly and other is leaf then return that leaf other
         if (getLeft().getClass() == LeafNode.class
-            && getRight() == FlyweightNode.get())
-        {
+            && getRight() == FlyweightNode.get()) {
             return getLeft();
         }
-        else if (getLeft() == FlyweightNode.get()
-            && getRight().getClass() == LeafNode.class)
-        {
+        else if (getLeft() == FlyweightNode.get() && getRight()
+            .getClass() == LeafNode.class) {
             return getRight();
         }
         return this;

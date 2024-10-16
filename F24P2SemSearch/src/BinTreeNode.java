@@ -25,17 +25,38 @@ public interface BinTreeNode {
      */
     public BinTreeNode insert(Seminar sem, int x, int y, int width, int height);
 
+
     /**
      * search method
+     * 
      * @param x
+     *            x of seminar
      * @param y
+     *            y of seminar
      * @param radius
-     * @param bx the 
+     *            radius search
+     * @param bx
+     *            the x of bin tree
+     * @param by
+     *            the y of bin tree
+     * @param width
+     *            width of bin tree
+     * @param height
+     *            of bin tree
+     * @param output
+     *            PrintWriter output
      * @return the number of nodes visited
      */
-    public int search(int x, int y, int radius, int bx, int by, int width,
-        int height, PrintWriter output);
-    
+    public int search(
+        int x,
+        int y,
+        int radius,
+        int bx,
+        int by,
+        int width,
+        int height,
+        PrintWriter output);
+
 
     /**
      * delete method for all BinTreeNodes
