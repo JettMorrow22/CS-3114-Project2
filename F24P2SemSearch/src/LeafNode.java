@@ -138,8 +138,11 @@ public class LeafNode implements BinTreeNode {
             Seminar seminar = cur.getSeminar();
             if ((withinRange(x, y, radius, seminar.x(), seminar.y())))
                 {
+                    //increment count
                     count++;
-                    
+                    //print the seminar
+                    output.println("Found a record with key value " + 
+                    seminar.id() + " at " + seminar.x() + ", " + seminar.y());
                 }
             cur = cur.getNext();
         }
