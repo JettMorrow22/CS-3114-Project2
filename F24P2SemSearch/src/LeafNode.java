@@ -82,9 +82,15 @@ public class LeafNode implements BinTreeNode {
     }
 
 
-//    @Override
-//    public void delete(Seminar sem, int x, int y, int width, int height) {
-//        // TODO Auto-generated method stub
-//
-//    }
+    @Override
+    public void delete(Seminar sem, int x, int y, int width, int height) 
+    {
+        //remove the seminar
+        seminars.remove(sem);
+        if (seminars == null)
+        {
+            //replace with a flyweight node -- maybe test/do this in Bintree
+        }
+        //if the leaf node is now empty, replace with a flyweight node
+    }
 }

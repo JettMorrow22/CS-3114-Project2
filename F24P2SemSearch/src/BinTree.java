@@ -187,6 +187,6 @@ public class BinTree {
         int h = 2*r + 1;
         return 0;
         //return root.search(ax, ay, w, h);
-        //this will be the search method implemented in each
+        //this will be the search method implemented in each node class
     }
 }

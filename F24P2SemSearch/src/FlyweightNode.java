@@ -18,10 +18,10 @@ public class FlyweightNode implements BinTreeNode {
     }
 
     @Override
-    public void delete(int idf) 
+    public void delete(Seminar sem, int x, int y, int width, int height) 
     {
         // TODO delete a flyweight node... do nothing??
-
     }
+    
 
 }

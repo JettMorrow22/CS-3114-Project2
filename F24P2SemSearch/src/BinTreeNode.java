@@ -17,5 +17,23 @@ public interface BinTreeNode {
      * @param width
      * @param height
      */
-    void delete(Seminar sem, int x, int y, int width, int height);
+    public void delete(Seminar sem, int x, int y, int width, int height);
+    
+    /**
+     * search method
+     * @param x
+     * @param y
+     * @param radius
+     * @return the number of nodes visited
+     */
+    public int search(int x, int y, int radius, int bx, int by, int width,
+        int height);
+    
+    /**
+     * helper method for determining if a node is within a boundary box
+     * @param ax the box's xcoord
+     * @param ay the box's ycoord
+     * @param bx the node's xcoord
+     * @param by the node's ycoord
+     */
 }

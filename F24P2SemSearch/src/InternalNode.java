@@ -106,10 +106,31 @@ public class InternalNode implements BinTreeNode {
 
 
     @Override
-    public void delete(Seminar sem, int x, int y, int width, int height) 
+    public int search(int x, int y, int radius, int bx, int by, int width, 
+        int height) 
     {
-        //not really sure
+        //do the boxes overlap
+        //if ()
+        return radius;
+    }
+    
+    /**
+     * whether or not an internal node should be visited
+     * we need the box containing the node
+     * @param x
+     * @param y
+     * @param r
+     * 
+     * @return whether or not we need to check the internal node
+     */
+    public boolean withinBox(int x, int y, int r)
+    {
+        int ax = x-1;
+        int ay = y-1;
+        int w = 2*r + 1;
+        int h = 2*r + 1;
         
+        return true;
     }
 
 }
