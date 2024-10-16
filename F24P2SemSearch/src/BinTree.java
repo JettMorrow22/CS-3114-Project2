@@ -156,4 +156,37 @@ public class BinTree {
     public int getWorldSize() {
         return worldSize;
     }
+    
+    /**
+     * searchLocation method implementation
+     * search all subtrees within a radius of a starting point
+     * @param x xcoord
+     * @param y ycoord
+     * @param radius of how far we want to search
+     * @return records within radius
+     */
+    public int search(int x, int y, int radius)
+    {
+        //need to get the number of records within the radius, and track how 
+        //many nodes were visited
+        //create a boundary box?
+        return 0;
+    }
+    
+    /**
+     * helper method for search
+     * @param x xcoord
+     * @param y ycoord
+     * @param radius of how far we want to search
+     */
+    private int helpSearch(int x, int y, int r) 
+    {
+        int ax = x - 1;
+        int ay = y - 1;
+        int w = 2*r + 1;
+        int h = 2*r + 1;
+        return 0;
+        //return root.search(ax, ay, w, h);
+        //this will be the search method implemented in each
+    }
 }

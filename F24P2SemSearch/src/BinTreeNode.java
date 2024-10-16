@@ -8,5 +8,14 @@ public interface BinTreeNode {
 
     public BinTreeNode insert(Seminar sem, int x, int y, int width, int height);
 
-    // public void delete(Seminar sem, int x, int y, int width, int height);
+    // ----------------------------------------------------------
+    /**
+     * delete method
+     * @param sem the seminar we want to delete
+     * @param x
+     * @param y
+     * @param width
+     * @param height
+     */
+    void delete(Seminar sem, int x, int y, int width, int height);
 }

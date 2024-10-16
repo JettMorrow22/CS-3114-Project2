@@ -105,10 +105,11 @@ public class InternalNode implements BinTreeNode {
     }
 
 
-//    @Override
-//    public void delete(Seminar sem, int x, int y, int width, int height) {
-//        // TODO Auto-generated method stub
-//
-//    }
+    @Override
+    public void delete(Seminar sem, int x, int y, int width, int height) 
+    {
+        //not really sure
+        
+    }
 
 }

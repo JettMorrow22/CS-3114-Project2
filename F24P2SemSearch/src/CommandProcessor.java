@@ -132,6 +132,12 @@ public class CommandProcessor {
                         String high2 = oneLine.next();
                         controller.searchDate(low2, high2, output);
                         break;
+                    case "location":
+                        int xcoord = oneLine.nextInt();
+                        int ycoord = oneLine.nextInt();
+                        int radius = oneLine.nextInt();
+                        controller.searchLocation(xcoord, ycoord, radius, output);
+                        break;
                 }
                 oneLine.nextLine();
                 break;
