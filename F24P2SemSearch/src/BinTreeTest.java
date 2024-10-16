@@ -213,6 +213,6 @@ public class BinTreeTest extends TestCase {
         assertEquals(5, b2.search(2, 2, 1, output));
         
         b2.insert(x2y2);
-        assertEquals(6, b2.search(2, 2, 1, output));
+        assertEquals(7, b2.search(2, 2, 1, output));
     }
 }

@@ -149,16 +149,17 @@ public class InternalNode implements BinTreeNode {
             width = width / 2;
             // box is completely less than discriminator
             if (boundingTopLeftX + radius + radius < bx + width) {
-                return 1 + getLeft().search(x, y, radius, bx, by, width, height, output);
-            }
-            else if (boundingTopLeftX > bx + width) { // greater than or equal
-                return 1 + getRight().search(x, y, radius, bx + width, by, width, height,
+                return 1 + getLeft().search(x, y, radius, bx, by, width, height,
                     output);
             }
+            else if (boundingTopLeftX > bx + width) { // greater than or equal
+                return 1 + getRight().search(x, y, radius, bx + width, by,
+                    width, height, output);
+            }
             else { // in the middle (go left and right)
-                return 1 + getLeft().search(x, y, radius, bx, by, width, height, output)
-                    + getRight().search(x, y, radius, bx + width, by, width, height,
-                        output);
+                return 1 + getLeft().search(x, y, radius, bx, by, width, height,
+                    output) + getRight().search(x, y, radius, bx + width, by,
+                        width, height, output);
             }
         }
         else {
@@ -166,16 +167,17 @@ public class InternalNode implements BinTreeNode {
             height = height / 2;
             // above it
             if (boundingTopLeftY + radius + radius < by + height) {
-                return 1 + getLeft().search(x, y, radius, bx, by, width, height, output);
-            }
-            else if (boundingTopLeftY > by + height) { // below it
-                return 1 + getRight().search(x, y, radius, bx, by + height, width, height,
+                return 1 + getLeft().search(x, y, radius, bx, by, width, height,
                     output);
             }
+            else if (boundingTopLeftY > by + height) { // below it
+                return 1 + getRight().search(x, y, radius, bx, by + height,
+                    width, height, output);
+            }
             else { // both
-                return 1 + getLeft().search(x, y, radius, bx, by, width, height, output)
-                    + getRight().search(x, y, radius, bx, by + height, width, height,
-                        output);
+                return 1 + getLeft().search(x, y, radius, bx, by, width, height,
+                    output) + getRight().search(x, y, radius, bx, by + height,
+                        width, height, output);
             }
         }
     }
