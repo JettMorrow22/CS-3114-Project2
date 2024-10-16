@@ -120,10 +120,14 @@ public class InternalNode implements BinTreeNode {
      * @param x
      * @param y
      * @param r
-     * 
+     * @param bx the x dis
+     * @param by the y dis
+     * @param width of world
+     * @param height of world
      * @return whether or not we need to check the internal node
      */
-    public boolean withinBox(int x, int y, int r)
+    public boolean withinBox(int x, int y, int r, int bx, 
+        int by, int width, int height)
     {
         int ax = x-1;
         int ay = y-1;

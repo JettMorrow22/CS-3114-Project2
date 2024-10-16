@@ -170,6 +170,7 @@ public class BinTree {
         //need to get the number of records within the radius, and track how 
         //many nodes were visited
         //create a boundary box?
+        //return root.search(x, y, radius);
         return 0;
     }
     
@@ -181,12 +182,13 @@ public class BinTree {
      */
     private int helpSearch(int x, int y, int r) 
     {
-        int ax = x - 1;
-        int ay = y - 1;
-        int w = 2*r + 1;
-        int h = 2*r + 1;
+//        int ax = x - 1;
+//        int ay = y - 1;
+//        int w = 2*r + 1;
+//        int h = 2*r + 1;
+//        return 0;
+//        //return root.search(x, y, r, 0, 0, worldsize, worldsize);
+//        //this will be the search method implemented in each node class
         return 0;
-        //return root.search(ax, ay, w, h);
-        //this will be the search method implemented in each node class
     }
 }
