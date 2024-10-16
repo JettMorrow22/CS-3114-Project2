@@ -115,8 +115,12 @@ public class InternalNode implements BinTreeNode {
     public int search(int x, int y, int radius, int bx, int by, int width, 
         int height) 
     {
-        //do the boxes overlap
-        //if ()
+        //do we want to search the left subtree
+        if (width == height)
+        {
+            width = width / 2;
+            
+        }
         return radius;
     }
     
@@ -126,8 +130,8 @@ public class InternalNode implements BinTreeNode {
      * @param x
      * @param y
      * @param r
-     * @param bx the x dis
-     * @param by the y dis
+     * @param bx the x coord
+     * @param by the y coord
      * @param width of world
      * @param height of world
      * @return whether or not we need to check the internal node
@@ -139,7 +143,7 @@ public class InternalNode implements BinTreeNode {
         int ay = y-1;
         int w = 2*r + 1;
         int h = 2*r + 1;
-        
+        //if ()
         return true;
     }
     /**

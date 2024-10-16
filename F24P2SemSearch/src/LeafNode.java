@@ -133,7 +133,7 @@ public class LeafNode implements BinTreeNode {
         while(cur != null)
         {
             Seminar seminar = cur.getSeminar();
-            if ((withinRange(x, y, radius, seminar.x(), seminar.y()))
+            if ((withinRange(x, y, radius, seminar.x(), seminar.y())))
                 {
                     count++;
                     

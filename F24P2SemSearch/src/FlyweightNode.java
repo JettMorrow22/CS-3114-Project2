@@ -75,8 +75,8 @@ public class FlyweightNode
         int
         search(int x, int y, int radius, int bx, int by, int width, int height)
     {
-        // TODO Auto-generated method stub
-        return 0;
+     
+        return 1;
     }
 
 }
