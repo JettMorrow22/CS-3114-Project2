@@ -37,7 +37,7 @@ public class CommandProcessor {
      *            the output
      */
     public void interpretAllLines(Scanner input, PrintWriter output) {
-        while (input.hasNextLine()) {
+        while (input.hasNext()) {
             this.interpretLine(input, output, input);
         }
         output.close();
