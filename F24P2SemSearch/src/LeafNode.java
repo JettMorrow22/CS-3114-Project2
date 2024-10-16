@@ -128,7 +128,31 @@ public class LeafNode implements BinTreeNode {
         int
         search(int x, int y, int radius, int bx, int by, int width, int height)
     {
-        // TODO Auto-generated method stub
-        return 0;
+        int count = 0;
+        LinkedList.LLNode cur = seminars.getHead();
+        while(cur != null)
+        {
+            Seminar seminar = cur.getSeminar();
+            if ((withinRange(x, y, radius, seminar.x(), seminar.y()))
+                {
+                    count++;
+                    
+                }
+            cur = cur.getNext();
+        }
+        
+        return count;
+    }
+    /**
+     * helper method for search
+     * 
+     */
+    private boolean withinRange(int x, int y, int radius, int ax, int ay)
+    {
+        if ((x - ax)*(x - ax) + (y - ay)*(y - ay) <= (radius * radius))
+        {
+            return true;
+        }
+        return false;
     }
 }
