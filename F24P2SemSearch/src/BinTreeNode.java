@@ -34,13 +34,6 @@ public interface BinTreeNode {
     public int search(int x, int y, int radius, int bx, int by, int width,
         int height);
     
-    /**
-     * helper method for determining if a node is within a boundary box
-     * @param ax the box's xcoord
-     * @param ay the box's ycoord
-     * @param bx the node's xcoord
-     * @param by the node's ycoord
-     */
 
     /**
      * delete method for all BinTreeNodes

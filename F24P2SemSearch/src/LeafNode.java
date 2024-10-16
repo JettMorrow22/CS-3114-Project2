@@ -89,6 +89,7 @@ public class LeafNode implements BinTreeNode {
         return temp;
     }
 
+
     /**
      * Delete method for LeafNode
      * 
@@ -124,10 +125,14 @@ public class LeafNode implements BinTreeNode {
 
 
     @Override
-    public
-        int
-        search(int x, int y, int radius, int bx, int by, int width, int height)
-    {
+    public int search(
+        int x,
+        int y,
+        int radius,
+        int bx,
+        int by,
+        int width,
+        int height) {
         // TODO Auto-generated method stub
         return 0;
     }

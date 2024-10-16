@@ -111,37 +111,71 @@ public class InternalNode implements BinTreeNode {
     }
 
 
-    @Override
-    public int search(int x, int y, int radius, int bx, int by, int width, 
-        int height) 
-    {
-        //do the boxes overlap
-        //if ()
-        return radius;
-    }
-    
     /**
-     * whether or not an internal node should be visited
-     * we need the box containing the node
+     * internal nodes determines which nodes we should search
+     * 
      * @param x
+     *            x of search
      * @param y
-     * @param r
-     * @param bx the x dis
-     * @param by the y dis
-     * @param width of world
-     * @param height of world
-     * @return whether or not we need to check the internal node
+     *            y of search
+     * @param radius
+     *            radius of search
+     * @param bx
+     *            x of where we are in the bin tree
+     * @param by
+     *            y of where we are in the bin tree
+     * @param width
+     *            width of bin tree
+     * @param height
+     *            height of bin tree
+     * @return the nodes visited in the search
      */
-    public boolean withinBox(int x, int y, int r, int bx, 
-        int by, int width, int height)
-    {
-        int ax = x-1;
-        int ay = y-1;
-        int w = 2*r + 1;
-        int h = 2*r + 1;
-        
-        return true;
+    @Override
+    public int search(
+        int x,
+        int y,
+        int radius,
+        int bx,
+        int by,
+        int width,
+        int height) {
+
+        int boundingTopLeftX = x - radius;
+        int boundingTopLeftY = y - radius;
+        if (width == height) {
+            // x is discriminator
+            width = width / 2;
+            // box is completely less than discriminator
+            if (boundingTopLeftX + radius + radius <= bx) {
+                return 1 + search(x, y, radius, bx, by, width, height);
+            }
+            else if (boundingTopLeftX >= bx) { // greater than or equal
+                return 1 + search(x, y, radius, bx + width, by, width, height);
+            }
+            else { // in the middle (go left and right)
+                return 1 + search(x, y, radius, bx, by, width, height) + search(
+                    x, y, radius, bx + width, by, width, height);
+            }
+
+        }
+        else {
+            // y is discriminator\
+            height = height / 2;
+            // above it
+            if (boundingTopLeftY + radius + radius <= by) {
+                return 1 + search(x, y, radius, bx, by, width, height);
+            }
+            else if (boundingTopLeftY >= by) { // below it
+                return 1 + search(x, y, radius, bx, by + height, width, height);
+            }
+            else { // both
+                return 1 + search(x, y, radius, bx, by, width, height) + search(
+                    x, y, radius, bx, by + height, width, height);
+            }
+        }
     }
+
+
     /**
      * delete method for Internal Node
      * 
