@@ -21,6 +21,7 @@ public class InternalNode implements BinTreeNode {
 
     /**
      * Basic getter for Left
+     * 
      * @return Left
      */
     public BinTreeNode getLeft() {
@@ -30,6 +31,7 @@ public class InternalNode implements BinTreeNode {
 
     /**
      * Basic getter for Right
+     * 
      * @return Right
      */
     public BinTreeNode getRight() {
@@ -39,7 +41,9 @@ public class InternalNode implements BinTreeNode {
 
     /**
      * Basic setter for left
-     * @param left new Left for BinTreeNode
+     * 
+     * @param left
+     *            new Left for BinTreeNode
      */
     public void setLeft(BinTreeNode left) {
         this.left = left;
@@ -48,7 +52,9 @@ public class InternalNode implements BinTreeNode {
 
     /**
      * Basic setter for Right
-     * @param right new Right BinTreeNode
+     * 
+     * @param right
+     *            new Right BinTreeNode
      */
     public void setRight(BinTreeNode right) {
         this.right = right;
@@ -135,6 +141,62 @@ public class InternalNode implements BinTreeNode {
         int h = 2*r + 1;
         
         return true;
+    }
+    /**
+     * delete method for Internal Node
+     * 
+     * @param sem
+     *            Seminar obj
+     * @param x
+     *            x point
+     * @param y
+     *            y point
+     * @param width
+     *            width of the box
+     * @parma height height of the box
+     * 
+     * @return returns its self it it has two leaf node children
+     *         returns leaf node if one child is leaf and the other is
+     *         flyweightNode
+     */
+    @Override
+    public BinTreeNode delete(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
+
+        if (width == height) {
+            width = width / 2;
+            if (sem.x() < x + width) {
+                setLeft(getLeft().delete(sem, x, y, width, height));
+            }
+            else {
+                setRight(getRight().delete(sem, x + width, y, width, height));
+            }
+        }
+        else {
+            height = height / 2;
+            if (sem.y() < y + height) {
+                setLeft(getLeft().delete(sem, x, y, width, height));
+            }
+            else {
+                setRight(getRight().delete(sem, x, y + height, width, height));
+            }
+        }
+
+        // if one child is fly and other is leaf then return that leaf other
+        if (getLeft().getClass() == LeafNode.class
+            && getRight() == FlyweightNode.get()) {
+            return getLeft();
+        }
+        else if (getLeft() == FlyweightNode.get() && getRight()
+            .getClass() == LeafNode.class) {
+            return getRight();
+        }
+        return this;
+
     }
 
 }

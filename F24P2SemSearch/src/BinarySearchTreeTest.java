@@ -240,9 +240,14 @@ public class BinarySearchTreeTest extends TestCase {
         // Check if the new maximum is now correct
         BSTNode<Integer> newMaxNode = bst.getMax(bst.getRoot());
         assertNotNull(newMaxNode);
+<<<<<<< HEAD
         assertTrue(record1.getKey() == 
             newMaxNode.getRecord().getKey()); // New max should be "10"
 
+=======
+        assertTrue(record1.getKey() == newMaxNode.getRecord().getKey()); 
+        //new max is 10
+>>>>>>> branch 'master' of https://github.com/JettMorrow22/CS-3114-Project2.git
     }
 
 

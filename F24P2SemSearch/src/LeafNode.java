@@ -12,6 +12,7 @@ public class LeafNode implements BinTreeNode {
      * Basic constructor for LeafNode adds seminar to the LinkedList
      * 
      * @param sem
+     *            Seminar obj
      */
     public LeafNode(Seminar sem) {
         seminars = new LinkedList();
@@ -33,9 +34,11 @@ public class LeafNode implements BinTreeNode {
         }
         return temp.getSeminar();
     }
-    
+
+
     /**
-     * getter for Seminars
+     * getter for seminars
+     * 
      * @return seminars
      */
     public LinkedList getSeminars() {
@@ -46,15 +49,20 @@ public class LeafNode implements BinTreeNode {
     /**
      * Insert method for a LeafNode in the binTree
      * 
-     * @param sem Seminar obj
-     * @param x x point
-     * @param y y point
-     * @param width width of the box
+     * @param sem
+     *            Seminar obj
+     * @param x
+     *            x point
+     * @param y
+     *            y point
+     * @param width
+     *            width of the box
      * @parma height height of the box
      * 
      * @return BinTreeNode returns a internal node with leafnodes as its
      *         children
      */
+    @Override
     public BinTreeNode insert(
         Seminar sem,
         int x,
@@ -81,16 +89,46 @@ public class LeafNode implements BinTreeNode {
         return temp;
     }
 
+    /**
+     * Delete method for LeafNode
+     * 
+     * @param sem
+     *            Seminar obj
+     * @param x
+     *            x point
+     * @param y
+     *            y point
+     * @param width
+     *            width of the box
+     * @parma height height of the box
+     * 
+     * @return returns flyweight node is seminars is empty after removal, or
+     *         itsself
+     */
+    @Override
+    public BinTreeNode delete(
+        Seminar sem,
+        int x,
+        int y,
+        int width,
+        int height) {
+        // remove seminar from the LinkedList
+        seminars.remove(sem);
+        // if seminars is empty return flyweight node
+        if (seminars.getNumNodes() == 0) {
+            return FlyweightNode.get();
+        }
+        // if not rempty return its self
+        return this;
+    }
+
 
     @Override
-    public void delete(Seminar sem, int x, int y, int width, int height) 
+    public
+        int
+        search(int x, int y, int radius, int bx, int by, int width, int height)
     {
-        //remove the seminar
-        seminars.remove(sem);
-        if (seminars == null)
-        {
-            //replace with a flyweight node -- maybe test/do this in Bintree
-        }
-        //if the leaf node is now empty, replace with a flyweight node
+        // TODO Auto-generated method stub
+        return 0;
     }
 }

@@ -6,19 +6,23 @@
  */
 public interface BinTreeNode {
 
+    /**
+     * insert method for all BinTreeNodes
+     * 
+     * @param sem
+     *            Seminar obj
+     * @param x
+     *            cur x value
+     * @param y
+     *            cur y value
+     * @param width
+     *            cur width
+     * @param height
+     *            cur height
+     * @return BinTreeNode
+     */
     public BinTreeNode insert(Seminar sem, int x, int y, int width, int height);
 
-    // ----------------------------------------------------------
-    /**
-     * delete method
-     * @param sem the seminar we want to delete
-     * @param x
-     * @param y
-     * @param width
-     * @param height
-     */
-    public void delete(Seminar sem, int x, int y, int width, int height);
-    
     /**
      * search method
      * @param x
@@ -37,4 +41,21 @@ public interface BinTreeNode {
      * @param bx the node's xcoord
      * @param by the node's ycoord
      */
+
+    /**
+     * delete method for all BinTreeNodes
+     * 
+     * @param sem
+     *            Seminar obj
+     * @param x
+     *            cur x value
+     * @param y
+     *            cur y value
+     * @param width
+     *            cur width
+     * @param height
+     *            cur height
+     * @return BinTreeNode
+     */
+    public BinTreeNode delete(Seminar sem, int x, int y, int width, int height);
 }
