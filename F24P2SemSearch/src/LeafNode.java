@@ -141,7 +141,7 @@ public class LeafNode implements BinTreeNode {
                     //increment count
                     count++;
                     //print the seminar
-                    output.println("Found a record with key value " + 
+                    output.println("Found a record with key value " +  
                     seminar.id() + " at " + seminar.x() + ", " + seminar.y());
                 }
             cur = cur.getNext();
