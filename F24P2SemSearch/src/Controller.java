@@ -124,8 +124,7 @@ public class Controller {
             output.println(temp.getRecord().getSem().toString());
         }
     }
-
-
+ 
     /**
      * method to search a range of costs
      * 

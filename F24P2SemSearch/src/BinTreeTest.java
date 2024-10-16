@@ -16,12 +16,15 @@ public class BinTreeTest extends TestCase {
     private Seminar four;
     private Seminar five;
     private PrintWriter output;
+    
+    private BinTree b2;
 
     /**
      * method to setup Seminars adn BinList
      */
     public void setUp() {
         bin = new BinTree(128);
+        b2 = new BinTree(4);
         String[] keywords = { "keywords" };
         one = new Seminar(1, "title", "data", 1, (short)80, (short)30, 1,
             keywords, "description");
@@ -183,5 +186,35 @@ public class BinTreeTest extends TestCase {
         bin.delete(dup3);
         bin.printTree(output);
         output.flush();
+    }
+    
+    /**
+     * test case for search
+     */
+    public void testSearch()
+    {
+        String[] keywords = { "Keyword" };
+        assertEquals(1, bin.search(5, 5, 5, output));
+        Seminar x1y0 = new Seminar(4, "title", "data", 4, (short)1, (short)0,
+            1, keywords, "description");
+        Seminar x1y2 = new Seminar(5, "title", "data", 5, (short)1, (short)2,
+            1, keywords, "description");
+        Seminar x2y1 = new Seminar(5, "title", "data", 5, (short)2, (short)1,
+            1, keywords, "description");
+        Seminar x2y2 = new Seminar(4, "title", "data", 4, (short)1, (short)0,
+            1, keywords, "description");
+        
+        assertEquals(1, bin.search(5, 5, 20, output));
+        b2.insert(x1y0);
+        b2.insert(x1y2);
+        b2.insert(x2y1);
+        assertEquals(5, b2.search(1, 1, 1, output));
+        assertEquals(3, b2.search(0, 0, 1, output));
+        assertEquals(5, b2.search(2, 2, 1, output));
+        
+        b2.insert(x2y2);
+        assertEquals(6, b2.search(2, 2, 1, output));
+
+        
     }
 }
