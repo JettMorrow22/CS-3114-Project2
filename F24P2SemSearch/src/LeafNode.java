@@ -140,7 +140,8 @@ public class LeafNode
         while (cur != null)
         {
             Seminar seminar = cur.getSeminar();
-            if ((withinRange(x, y, radius, seminar.x(), seminar.y())))
+            if (((x - seminar.x()) * (x - seminar.x()) + (y - seminar.y())
+                * (y - seminar.y())) <= (radius * radius))
             {
                 // print the seminar
                 output.println(
@@ -152,17 +153,6 @@ public class LeafNode
 
         return 1;
     }
-
-
-    /**
-     * helper method for search
-     */
-    private boolean withinRange(int x, int y, int radius, int ax, int ay)
-    {
-        if ((x - ax) * (x - ax) + (y - ay) * (y - ay) <= (radius * radius))
-        {
-            return true;
-        }
-        return false;
-    }
+//    if (((x - seminar.x()) * (x - seminar.x()) + (y - seminar.y())
+//        * (y - seminar.y())) <= (radius * radius))
 }

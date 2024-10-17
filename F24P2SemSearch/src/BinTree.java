@@ -186,6 +186,7 @@ public class BinTree {
      * @param x xcoord
      * @param y ycoord
      * @param radius of how far we want to search
+     * @param output where we output
      * @return records within radius
      */
     public int search(int x, int y, int radius, PrintWriter output)
@@ -196,21 +197,4 @@ public class BinTree {
         return root.search(x, y, radius, 0, 0, worldSize, worldSize, output);
     }
     
-    /**
-     * helper method for search
-     * @param x xcoord
-     * @param y ycoord
-     * @param radius of how far we want to search
-     */
-    private int helpSearch(int x, int y, int r) 
-    {
-//        int ax = x - 1;
-//        int ay = y - 1;
-//        int w = 2*r + 1;
-//        int h = 2*r + 1;
-//        return 0;
-//        //return root.search(x, y, r, 0, 0, worldsize, worldsize);
-//        //this will be the search method implemented in each node class
-        return 0;
-    }
 }

@@ -1,4 +1,5 @@
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import student.TestCase;
 
 /**
@@ -202,7 +203,6 @@ public class BinTreeTest extends TestCase {
         Seminar x2y1 = new Seminar(5, "title", "data", 5, (short)2, (short)1,
             1, keywords, "description");
         Seminar x2y2 = new Seminar(4, "title", "data", 4, (short)2, (short)2,
-
             1, keywords, "description");
         Seminar x2y3 = new Seminar(4, "title", "data", 4, (short)1, (short)0,
             1, keywords, "description");
@@ -214,8 +214,45 @@ public class BinTreeTest extends TestCase {
         assertEquals(5, b2.search(1, 1, 1, output));
         assertEquals(3, b2.search(0, 0, 1, output));
         assertEquals(5, b2.search(2, 2, 1, output));
+        assertEquals(4, b2.search(1, 4, 1, output));
+        assertEquals(2, b2.search(5, 5, 1, output));
         
-        b2.insert(x2y2);
-        assertEquals(7, b2.search(2, 2, 1, output));
+    }
+    /**
+     * test method for xy mutation
+     */
+    public void testSearchAdv()
+    {
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter output1 = new PrintWriter(stringWriter);
+        
+        String[] keywords = { "Keyword" };
+        Seminar x1y0 = new Seminar(4, "title", "data", 4, (short)1, (short)0,
+            1, keywords, "description");
+        Seminar x1y2 = new Seminar(5, "title", "data", 5, (short)1, (short)2,
+            1, keywords, "description");
+        Seminar x2y1 = new Seminar(5, "title", "data", 5, (short)2, (short)1,
+            1, keywords, "description");
+        Seminar x3y3 = new Seminar(5, "title", "data", 5, (short)3, (short)3,
+            1, keywords, "description");
+        b2.insert(x1y0);
+        b2.insert(x1y2);
+        b2.insert(x2y1);
+        b2.insert(x3y3);
+        assertEquals(4, b2.search(3, 2, 1, output1));
+        assertEquals(4, b2.search(3, 2, 1, output));
+
+
+        //output.flush();
+        String result = stringWriter.toString();
+        System.out.println(result);
+        assertTrue(result.contains("Found a record with key value 5 at 3, 3"));
+        
+        output.flush();
+        output1.flush();
+        assertEquals(7, b2.search(0, 0, 2, output));
+        assertEquals(7, b2.search(0, 0, 2, output1));
+        //assertTrue(result.contains("Found a record with key value 4 at 1, 0"));
+        
     }
 }

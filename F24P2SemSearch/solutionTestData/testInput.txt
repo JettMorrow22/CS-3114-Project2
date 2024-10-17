@@ -1,300 +1,300 @@
 insert 1
 Overview of HCI Research at VT
-0610051600 90 -1 10 45
+0610051600 90 8 15 45
 HCI Computer_Science VT Virginia_Tech
 This seminar will present an overview of HCI research at VT
 
 insert 2
 Innovations in AI
-0610051601 85 -1 20 30
+0610051601 85 6 20 30
 AI Computer_Science VT Virginia_Tech
 This seminar covers the latest innovations in AI.
 
 insert 3
 Data Science Applications
-0610051602 80 -1 15 60
+0610051602 80 90 115 60
 Data_Science Computer_Science VT Virginia_Tech
 Discussing practical applications of data science.
 
 insert 4
 Machine Learning Fundamentals
-0610051603 70 -1 25 40
+0610051603 70 74 25 40
 ML Computer_Science VT Virginia_Tech
 An introduction to machine learning principles.
 
 insert 5
 Cybersecurity Trends
-0610051604 75 -1 35 50
+0610051604 75 80 35 50
 Cybersecurity Computer_Science VT Virginia_Tech
 Exploring current trends in cybersecurity.
 
 insert 6
 Blockchain Technology
-0610051605 60 -1 45 20
+0610051605 60 4 45 20
 Blockchain Computer_Science VT Virginia_Tech
 Understanding the fundamentals of blockchain technology.
 
 insert 7
 Robotics and Automation
-0610051606 65 -1 55 70
+0610051606 65 54 55 70
 Robotics Computer_Science VT Virginia_Tech
 Overview of robotics and automation technologies.
 
 insert 8
 Ethical AI
-0610051607 90 -1 10 90
+0610051607 90 24 10 90
 Ethical_AI Computer_Science VT Virginia_Tech
 Examining the ethics of AI applications.
 
 insert 9
 Virtual Reality in Education
-0610051608 80 -1 15 10
+0610051608 80 5 15 10
 VR Computer_Science VT Virginia_Tech
 Using virtual reality for enhanced learning experiences.
 
 insert 10
 Big Data Analytics
-0610051609 85 -1 20 20
+0610051609 85 7 20 20
 Big_Data Computer_Science VT Virginia_Tech
 Analyzing big data for actionable insights.
 
 insert 11
 Web Development Trends
-0610051610 70 -1 30 30
+0610051610 70 128 30 30
 Web_Dev Computer_Science VT Virginia_Tech
 Latest trends in web development.
 
 insert 12
 Cloud Computing Essentials
-0610051611 75 -1 40 40
+0610051611 75 9 40 40
 Cloud Computing Computer_Science VT Virginia_Tech
 Introduction to cloud computing concepts.
 
 insert 13
 Game Development
-0610051612 60 -1 50 50
+0610051612 60 3 50 50
 Game_Dev Computer_Science VT Virginia_Tech
 Fundamentals of game development.
 
 insert 14
 Mobile App Development
-0610051613 65 -1 60 60
+0610051613 65 77 60 60
 Mobile_Dev Computer_Science VT Virginia_Tech
 Creating applications for mobile devices.
 
 insert 15
 Internet of Things
-0610051614 90 -1 70 70
+0610051614 90 40 70 70
 IoT Computer_Science VT Virginia_Tech
 Exploring the Internet of Things ecosystem.
 
 insert 16
 Augmented Reality Applications
-0610051615 80 -1 80 80
+0610051615 80 89 80 80
 AR Computer_Science VT Virginia_Tech
 Applications of augmented reality in various fields.
 
 insert 17
 Natural Language Processing
-0610051616 85 -1 90 90
+0610051616 85 12 90 90
 NLP Computer_Science VT Virginia_Tech
 Understanding natural language processing techniques.
 
 insert 18
 Software Engineering Principles
-0610051617 70 -1 5 5
+0610051617 70 1 5 5
 Software_Eng Computer_Science VT Virginia_Tech
 Core principles of software engineering.
 
 insert 19
 Computer Vision
-0610051618 75 -1 15 15
+0610051618 75 23 15 15
 Computer_Vision Computer_Science VT Virginia_Tech
 Introduction to computer vision technologies.
 
 insert 20
 Quantum Computing Basics
-0610051619 60 -1 25 25
+0610051619 60 16 25 25
 Quantum_Computing Computer_Science VT Virginia_Tech
 Understanding the basics of quantum computing.
 
 insert 21
 Human-Computer Interaction
-0610051620 65 -1 35 35
+0610051620 65 28 35 35
 HCI_Intro Computer_Science VT Virginia_Tech
 Overview of human-computer interaction design.
 
 insert 22
 Digital Marketing Strategies
-0610051621 90 -1 45 45
+0610051621 90 35 45 45
 Digital_Marketing Computer_Science VT Virginia_Tech
 Effective strategies for digital marketing.
 
 insert 23
 Data Privacy Regulations
-0610051622 80 -1 55 55
+0610051622 80 50 55 55
 Data_Privacy Computer_Science VT Virginia_Tech
 Examining data privacy laws and regulations.
 
 insert 24
 Ethical Hacking
-0610051623 85 -1 65 65
+0610051623 85 61 65 65
 Ethical_Hacking Computer_Science VT Virginia_Tech
 Exploring ethical hacking practices.
 
 insert 25
 Smart Cities
-0610051624 70 -1 75 75
+0610051624 70 22 75 75
 Smart_Cities Computer_Science VT Virginia_Tech
 The concept of smart cities and their implications.
 
 insert 26
 E-Commerce Trends
-0610051625 75 -1 85 85
+0610051625 75 87 85 85
 E_Commerce Computer_Science VT Virginia_Tech
 Current trends in e-commerce platforms.
 
 insert 27
 DevOps Practices
-0610051626 60 -1 95 95
+0610051626 60 92 95 95
 DevOps Computer_Science VT Virginia_Tech
 Best practices for implementing DevOps.
 
 insert 28
 Augmented Analytics
-0610051627 65 -1 10 10
+0610051627 65 48 10 10
 Augmented_Analytics Computer_Science VT Virginia_Tech
 The role of augmented analytics in business.
 
 insert 29
 Biometrics in Security
-0610051628 90 -1 20 20
+0610051628 90 15 20 20
 Biometrics Computer_Science VT Virginia_Tech
 The use of biometrics for security purposes.
 
 insert 30
 Game Theory
-0610051629 80 -1 30 30
+0610051629 80 4 30 30
 Game_Theory Computer_Science VT Virginia_Tech
 Exploring the principles of game theory.
 
 insert 31
 Digital Forensics
-0610051630 85 -1 40 40
+0610051630 85 77 40 40
 Digital_Forensics Computer_Science VT Virginia_Tech
 Introduction to digital forensics methodologies.
 
 insert 32
 Social Media Analytics
-0610051631 70 -1 50 50
+0610051631 70 5 50 50
 Social_Media_Analytics Computer_Science VT Virginia_Tech
 Analyzing data from social media platforms.
 
 insert 33
 Financial Technology
-0610051632 75 -1 60 60
+0610051632 75 12 60 60
 FinTech Computer_Science VT Virginia_Tech
 The rise of financial technology innovations.
 
 insert 34
 Nanotechnology Applications
-0610051633 60 -1 70 70
+0610051633 60 55 70 70
 Nanotechnology Computer_Science VT Virginia_Tech
 Exploring applications of nanotechnology.
 
 insert 35
 Supply Chain Management
-0610051634 65 -1 80 80
+0610051634 65 21 80 80
 Supply_Chain Computer_Science VT Virginia_Tech
 Principles of supply chain management.
 
 insert 36
 Wearable Technology
-0610051635 90 -1 90 90
+0610051635 90 88 90 90
 Wearables Computer_Science VT Virginia_Tech
 Trends in wearable technology.
 
 insert 37
 3D Printing Innovations
-0610051636 80 -1 10 10
+0610051636 80 29 10 10
 3D_Printing Computer_Science VT Virginia_Tech
 Innovations in 3D printing technologies.
 
-insert 5
+insert 38
 Digital Twins
-0610051637 85 -1 20 20
+0610051637 85 69 20 20
 Digital_Twins Computer_Science VT Virginia_Tech
 Understanding the concept of digital twins.
 
 insert 39
 Cognitive Computing
-0610051638 70 -1 30 30
+0610051638 70 10 30 30
 Cognitive_Computing Computer_Science VT Virginia_Tech
 Principles of cognitive computing.
 
 insert 40
 Food Technology
-0610051639 75 -1 40 40
+0610051639 75 24 40 40
 Food_Tech Computer_Science VT Virginia_Tech
 Exploring advancements in food technology.
 
-insert 23
+insert 41
 Smart Manufacturing
-0610051640 60 -1 50 50
+0610051640 60 37 50 50
 Smart_Manufacturing Computer_Science VT Virginia_Tech
 Trends in smart manufacturing processes.
 
-insert 92
+insert 42
 Artificial Neural Networks
-0610051641 65 -1 60 60
+0610051641 65 78 60 60
 ANN Computer_Science VT Virginia_Tech
 Introduction to artificial neural networks.
 
-insert 84
+insert 43
 Digital Identity
-0610051642 90 -1 70 70
+0610051642 90 59 70 70
 Digital_Identity Computer_Science VT Virginia_Tech
 Understanding digital identity concepts.
 
-insert 42
+insert 44
 Mobile Security
-0610051643 80 -1 80 80
+0610051643 80 26 80 80
 Mobile_Security Computer_Science VT Virginia_Tech
 Examining mobile security challenges.
 
-insert 13
+insert 45
 Data Visualization Techniques
-0610051644 85 -1 90 90
+0610051644 85 90 90 90
 Data_Visualization Computer_Science VT Virginia_Tech
 Techniques for effective data visualization.
 
-insert 53
+insert 46
 Health Informatics
-0610051645 70 -1 5 5
+0610051645 70 8 5 5
 Health_Informatics Computer_Science VT Virginia_Tech
 Introduction to health informatics.
 
-insert 13
+insert 47
 Smart Home Technologies
-0610051646 75 -1 15 15
+0610051646 75 36 15 15
 Smart_Home Computer_Science VT Virginia_Tech
 Overview of smart home technology trends.
 
-insert 63
+insert 48
 Artificial Intelligence Ethics
-0610051647 60 -1 25 25
+0610051647 60 49 25 25
 AI_Ethics Computer_Science VT Virginia_Tech
 Discussing ethical implications of AI.
 
-insert 24
+insert 49
 Sustainable Technology
-0610051648 65 -1 35 35
+0610051648 65 81 35 35
 Sustainable_Tech Computer_Science VT Virginia_Tech
 Exploring sustainable technology practices.
 
-insert 20
+insert 50
 Telemedicine
-0610051649 90 -1 45 45
+0610051649 90 92 45 45
 Telemedicine Computer_Science VT Virginia_Tech
 The future of telemedicine in healthcare.
 

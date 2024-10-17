@@ -1,0 +1,1359 @@
+Description: Examining the ethics of AI applications.
+Keywords: Ethical_AI, Computer_Science, VT, Virginia_Tech
+ID: 9, Title: Virtual Reality in Education
+Date: 0610051608, Length: 80, X: 5, Y: 15, Cost: 10
+Description: Using virtual reality for enhanced learning experiences.
+Keywords: VR, Computer_Science, VT, Virginia_Tech
+ID: 10, Title: Big Data Analytics
+Date: 0610051609, Length: 85, X: 7, Y: 20, Cost: 20
+Description: Analyzing big data for actionable insights.
+Keywords: Big_Data, Computer_Science, VT, Virginia_Tech
+ID: 12, Title: Cloud Computing Essentials
+Date: 0610051611, Length: 75, X: 9, Y: 40, Cost: 40
+Description: Introduction to cloud computing concepts.
+Keywords: Cloud, Computing, Computer_Science, VT, Virginia_Tech
+ID: 13, Title: Game Development
+Date: 0610051612, Length: 60, X: 3, Y: 50, Cost: 50
+Description: Fundamentals of game development.
+Keywords: Game_Dev, Computer_Science, VT, Virginia_Tech
+ID: 14, Title: Mobile App Development
+Date: 0610051613, Length: 65, X: 77, Y: 60, Cost: 60
+Description: Creating applications for mobile devices.
+Keywords: Mobile_Dev, Computer_Science, VT, Virginia_Tech
+ID: 15, Title: Internet of Things
+Date: 0610051614, Length: 90, X: 40, Y: 70, Cost: 70
+Description: Exploring the Internet of Things ecosystem.
+Keywords: IoT, Computer_Science, VT, Virginia_Tech
+ID: 16, Title: Augmented Reality Applications
+Date: 0610051615, Length: 80, X: 89, Y: 80, Cost: 80
+Description: Applications of augmented reality in various fields.
+Keywords: AR, Computer_Science, VT, Virginia_Tech
+ID: 17, Title: Natural Language Processing
+Date: 0610051616, Length: 85, X: 12, Y: 90, Cost: 90
+Description: Understanding natural language processing techniques.
+Keywords: NLP, Computer_Science, VT, Virginia_Tech
+ID: 18, Title: Software Engineering Principles
+Date: 0610051617, Length: 70, X: 1, Y: 5, Cost: 5
+Description: Core principles of software engineering.
+Keywords: Software_Eng, Computer_Science, VT, Virginia_Tech
+ID: 19, Title: Computer Vision
+Date: 0610051618, Length: 75, X: 23, Y: 15, Cost: 15
+Description: Introduction to computer vision technologies.
+Keywords: Computer_Vision, Computer_Science, VT, Virginia_Tech
+ID: 20, Title: Quantum Computing Basics
+Date: 0610051619, Length: 60, X: 16, Y: 25, Cost: 25
+Description: Understanding the basics of quantum computing.
+Keywords: Quantum_Computing, Computer_Science, VT, Virginia_Tech
+ID: 21, Title: Human-Computer Interaction
+Date: 0610051620, Length: 65, X: 28, Y: 35, Cost: 35
+Description: Overview of human-computer interaction design.
+Keywords: HCI_Intro, Computer_Science, VT, Virginia_Tech
+ID: 22, Title: Digital Marketing Strategies
+Date: 0610051621, Length: 90, X: 35, Y: 45, Cost: 45
+Description: Effective strategies for digital marketing.
+Keywords: Digital_Marketing, Computer_Science, VT, Virginia_Tech
+ID: 23, Title: Data Privacy Regulations
+Date: 0610051622, Length: 80, X: 50, Y: 55, Cost: 55
+Description: Examining data privacy laws and regulations.
+Keywords: Data_Privacy, Computer_Science, VT, Virginia_Tech
+ID: 24, Title: Ethical Hacking
+Date: 0610051623, Length: 85, X: 61, Y: 65, Cost: 65
+Description: Exploring ethical hacking practices.
+Keywords: Ethical_Hacking, Computer_Science, VT, Virginia_Tech
+ID: 25, Title: Smart Cities
+Date: 0610051624, Length: 70, X: 22, Y: 75, Cost: 75
+Description: The concept of smart cities and their implications.
+Keywords: Smart_Cities, Computer_Science, VT, Virginia_Tech
+ID: 26, Title: E-Commerce Trends
+Date: 0610051625, Length: 75, X: 87, Y: 85, Cost: 85
+Description: Current trends in e-commerce platforms.
+Keywords: E_Commerce, Computer_Science, VT, Virginia_Tech
+ID: 27, Title: DevOps Practices
+Date: 0610051626, Length: 60, X: 92, Y: 95, Cost: 95
+Description: Best practices for implementing DevOps.
+Keywords: DevOps, Computer_Science, VT, Virginia_Tech
+ID: 28, Title: Augmented Analytics
+Date: 0610051627, Length: 65, X: 48, Y: 10, Cost: 10
+Description: The role of augmented analytics in business.
+Keywords: Augmented_Analytics, Computer_Science, VT, Virginia_Tech
+ID: 29, Title: Biometrics in Security
+Date: 0610051628, Length: 90, X: 15, Y: 20, Cost: 20
+Description: The use of biometrics for security purposes.
+Keywords: Biometrics, Computer_Science, VT, Virginia_Tech
+ID: 30, Title: Game Theory
+Date: 0610051629, Length: 80, X: 4, Y: 30, Cost: 30
+Description: Exploring the principles of game theory.
+Keywords: Game_Theory, Computer_Science, VT, Virginia_Tech
+ID: 31, Title: Digital Forensics
+Date: 0610051630, Length: 85, X: 77, Y: 40, Cost: 40
+Description: Introduction to digital forensics methodologies.
+Keywords: Digital_Forensics, Computer_Science, VT, Virginia_Tech
+ID: 32, Title: Social Media Analytics
+Date: 0610051631, Length: 70, X: 5, Y: 50, Cost: 50
+Description: Analyzing data from social media platforms.
+Keywords: Social_Media_Analytics, Computer_Science, VT, Virginia_Tech
+ID: 33, Title: Financial Technology
+Date: 0610051632, Length: 75, X: 12, Y: 60, Cost: 60
+Description: The rise of financial technology innovations.
+Keywords: FinTech, Computer_Science, VT, Virginia_Tech
+ID: 34, Title: Nanotechnology Applications
+Date: 0610051633, Length: 60, X: 55, Y: 70, Cost: 70
+Description: Exploring applications of nanotechnology.
+Keywords: Nanotechnology, Computer_Science, VT, Virginia_Tech
+ID: 35, Title: Supply Chain Management
+Date: 0610051634, Length: 65, X: 21, Y: 80, Cost: 80
+Description: Principles of supply chain management.
+Keywords: Supply_Chain, Computer_Science, VT, Virginia_Tech
+ID: 36, Title: Wearable Technology
+Date: 0610051635, Length: 90, X: 88, Y: 90, Cost: 90
+Description: Trends in wearable technology.
+Keywords: Wearables, Computer_Science, VT, Virginia_Tech
+ID: 37, Title: 3D Printing Innovations
+Date: 0610051636, Length: 80, X: 29, Y: 10, Cost: 10
+Description: Innovations in 3D printing technologies.
+Keywords: 3D_Printing, Computer_Science, VT, Virginia_Tech
+ID: 38, Title: Digital Twins
+Date: 0610051637, Length: 85, X: 69, Y: 20, Cost: 20
+Description: Understanding the concept of digital twins.
+Keywords: Digital_Twins, Computer_Science, VT, Virginia_Tech
+ID: 39, Title: Cognitive Computing
+Date: 0610051638, Length: 70, X: 10, Y: 30, Cost: 30
+Description: Principles of cognitive computing.
+Keywords: Cognitive_Computing, Computer_Science, VT, Virginia_Tech
+ID: 40, Title: Food Technology
+Date: 0610051639, Length: 75, X: 24, Y: 40, Cost: 40
+Description: Exploring advancements in food technology.
+Keywords: Food_Tech, Computer_Science, VT, Virginia_Tech
+ID: 41, Title: Smart Manufacturing
+Date: 0610051640, Length: 60, X: 37, Y: 50, Cost: 50
+Description: Trends in smart manufacturing processes.
+Keywords: Smart_Manufacturing, Computer_Science, VT, Virginia_Tech
+ID: 42, Title: Artificial Neural Networks
+Date: 0610051641, Length: 65, X: 78, Y: 60, Cost: 60
+Description: Introduction to artificial neural networks.
+Keywords: ANN, Computer_Science, VT, Virginia_Tech
+ID: 43, Title: Digital Identity
+Date: 0610051642, Length: 90, X: 59, Y: 70, Cost: 70
+Description: Understanding digital identity concepts.
+Keywords: Digital_Identity, Computer_Science, VT, Virginia_Tech
+ID: 44, Title: Mobile Security
+Date: 0610051643, Length: 80, X: 26, Y: 80, Cost: 80
+Description: Examining mobile security challenges.
+Keywords: Mobile_Security, Computer_Science, VT, Virginia_Tech
+ID: 45, Title: Data Visualization Techniques
+Date: 0610051644, Length: 85, X: 90, Y: 90, Cost: 90
+Description: Techniques for effective data visualization.
+Keywords: Data_Visualization, Computer_Science, VT, Virginia_Tech
+ID: 46, Title: Health Informatics
+Date: 0610051645, Length: 70, X: 8, Y: 5, Cost: 5
+Description: Introduction to health informatics.
+Keywords: Health_Informatics, Computer_Science, VT, Virginia_Tech
+ID: 47, Title: Smart Home Technologies
+Date: 0610051646, Length: 75, X: 36, Y: 15, Cost: 15
+Description: Overview of smart home technology trends.
+Keywords: Smart_Home, Computer_Science, VT, Virginia_Tech
+ID: 48, Title: Artificial Intelligence Ethics
+Date: 0610051647, Length: 60, X: 49, Y: 25, Cost: 25
+Description: Discussing ethical implications of AI.
+Keywords: AI_Ethics, Computer_Science, VT, Virginia_Tech
+ID: 49, Title: Sustainable Technology
+Date: 0610051648, Length: 65, X: 81, Y: 35, Cost: 35
+Description: Exploring sustainable technology practices.
+Keywords: Sustainable_Tech, Computer_Science, VT, Virginia_Tech
+ID: 50, Title: Telemedicine
+Date: 0610051649, Length: 90, X: 92, Y: 45, Cost: 45
+Description: The future of telemedicine in healthcare.
+Keywords: Telemedicine, Computer_Science, VT, Virginia_Tech
+99 nodes visited in this search
+Seminars within 2000 units of -1, 0:
+Found a record with key value 18 at 1, 5
+Found a record with key value 9 at 5, 15
+Found a record with key value 46 at 8, 5
+Found a record with key value 1 at 8, 15
+Found a record with key value 2 at 6, 20
+Found a record with key value 10 at 7, 20
+Found a record with key value 30 at 4, 30
+Found a record with key value 29 at 15, 20
+Found a record with key value 39 at 10, 30
+Found a record with key value 19 at 23, 15
+Found a record with key value 8 at 24, 10
+Found a record with key value 37 at 29, 10
+Found a record with key value 20 at 16, 25
+Found a record with key value 6 at 4, 45
+Found a record with key value 12 at 9, 40
+Found a record with key value 13 at 3, 50
+Found a record with key value 32 at 5, 50
+Found a record with key value 33 at 12, 60
+Found a record with key value 21 at 28, 35
+Found a record with key value 40 at 24, 40
+Found a record with key value 47 at 36, 15
+Found a record with key value 28 at 48, 10
+Found a record with key value 48 at 49, 25
+Found a record with key value 22 at 35, 45
+Found a record with key value 41 at 37, 50
+Found a record with key value 23 at 50, 55
+Found a record with key value 7 at 54, 55
+Found a record with key value 17 at 12, 90
+Found a record with key value 25 at 22, 75
+Found a record with key value 35 at 21, 80
+Found a record with key value 44 at 26, 80
+Found a record with key value 15 at 40, 70
+Found a record with key value 34 at 55, 70
+Found a record with key value 43 at 59, 70
+Found a record with key value 24 at 61, 65
+Found a record with key value 38 at 69, 20
+Found a record with key value 4 at 74, 25
+Found a record with key value 31 at 77, 40
+Found a record with key value 14 at 77, 60
+Found a record with key value 42 at 78, 60
+Found a record with key value 5 at 80, 35
+Found a record with key value 49 at 81, 35
+Found a record with key value 50 at 92, 45
+Found a record with key value 26 at 87, 85
+Found a record with key value 16 at 89, 80
+Found a record with key value 36 at 88, 90
+Found a record with key value 45 at 90, 90
+Found a record with key value 27 at 92, 95
+Found a record with key value 3 at 90, 115
+161 nodes visited in this search
+Seminars with dates in range 1 to 2:
+50 nodes visited in this search
+Record with ID 1 successfully deleted from the database
+Record with ID 5 successfully deleted from the database
+Record with ID 10 successfully deleted from the database
+Record with ID 15 successfully deleted from the database
+Record with ID 20 successfully deleted from the database
+Record with ID 25 successfully deleted from the database
+Record with ID 30 successfully deleted from the database
+Record with ID 35 successfully deleted from the database
+Record with ID 40 successfully deleted from the database
+Record with ID 45 successfully deleted from the database
+Record with ID 2 successfully deleted from the database
+Record with ID 3 successfully deleted from the database
+Record with ID 4 successfully deleted from the database
+Record with ID 6 successfully deleted from the database
+Record with ID 7 successfully deleted from the database
+Record with ID 8 successfully deleted from the database
+Record with ID 9 successfully deleted from the database
+Delete FAILED -- There is no record with ID 11
+Record with ID 12 successfully deleted from the database
+Record with ID 13 successfully deleted from the database
+Record with ID 14 successfully deleted from the database
+Search FAILED -- There is no record with ID 1
+Search FAILED -- There is no record with ID 5
+Seminars matching keyword AI:
+Seminars matching keyword VT:
+ID: 50, Title: Telemedicine
+Date: 0610051649, Length: 90, X: 92, Y: 45, Cost: 45
+Description: The future of telemedicine in healthcare.
+Keywords: Telemedicine, Computer_Science, VT, Virginia_Tech
+ID: 49, Title: Sustainable Technology
+Date: 0610051648, Length: 65, X: 81, Y: 35, Cost: 35
+Description: Exploring sustainable technology practices.
+Keywords: Sustainable_Tech, Computer_Science, VT, Virginia_Tech
+ID: 48, Title: Artificial Intelligence Ethics
+Date: 0610051647, Length: 60, X: 49, Y: 25, Cost: 25
+Description: Discussing ethical implications of AI.
+Keywords: AI_Ethics, Computer_Science, VT, Virginia_Tech
+ID: 47, Title: Smart Home Technologies
+Date: 0610051646, Length: 75, X: 36, Y: 15, Cost: 15
+Description: Overview of smart home technology trends.
+Keywords: Smart_Home, Computer_Science, VT, Virginia_Tech
+ID: 46, Title: Health Informatics
+Date: 0610051645, Length: 70, X: 8, Y: 5, Cost: 5
+Description: Introduction to health informatics.
+Keywords: Health_Informatics, Computer_Science, VT, Virginia_Tech
+ID: 44, Title: Mobile Security
+Date: 0610051643, Length: 80, X: 26, Y: 80, Cost: 80
+Description: Examining mobile security challenges.
+Keywords: Mobile_Security, Computer_Science, VT, Virginia_Tech
+ID: 43, Title: Digital Identity
+Date: 0610051642, Length: 90, X: 59, Y: 70, Cost: 70
+Description: Understanding digital identity concepts.
+Keywords: Digital_Identity, Computer_Science, VT, Virginia_Tech
+ID: 42, Title: Artificial Neural Networks
+Date: 0610051641, Length: 65, X: 78, Y: 60, Cost: 60
+Description: Introduction to artificial neural networks.
+Keywords: ANN, Computer_Science, VT, Virginia_Tech
+ID: 41, Title: Smart Manufacturing
+Date: 0610051640, Length: 60, X: 37, Y: 50, Cost: 50
+Description: Trends in smart manufacturing processes.
+Keywords: Smart_Manufacturing, Computer_Science, VT, Virginia_Tech
+ID: 39, Title: Cognitive Computing
+Date: 0610051638, Length: 70, X: 10, Y: 30, Cost: 30
+Description: Principles of cognitive computing.
+Keywords: Cognitive_Computing, Computer_Science, VT, Virginia_Tech
+ID: 38, Title: Digital Twins
+Date: 0610051637, Length: 85, X: 69, Y: 20, Cost: 20
+Description: Understanding the concept of digital twins.
+Keywords: Digital_Twins, Computer_Science, VT, Virginia_Tech
+ID: 37, Title: 3D Printing Innovations
+Date: 0610051636, Length: 80, X: 29, Y: 10, Cost: 10
+Description: Innovations in 3D printing technologies.
+Keywords: 3D_Printing, Computer_Science, VT, Virginia_Tech
+ID: 36, Title: Wearable Technology
+Date: 0610051635, Length: 90, X: 88, Y: 90, Cost: 90
+Description: Trends in wearable technology.
+Keywords: Wearables, Computer_Science, VT, Virginia_Tech
+ID: 34, Title: Nanotechnology Applications
+Date: 0610051633, Length: 60, X: 55, Y: 70, Cost: 70
+Description: Exploring applications of nanotechnology.
+Keywords: Nanotechnology, Computer_Science, VT, Virginia_Tech
+ID: 33, Title: Financial Technology
+Date: 0610051632, Length: 75, X: 12, Y: 60, Cost: 60
+Description: The rise of financial technology innovations.
+Keywords: FinTech, Computer_Science, VT, Virginia_Tech
+ID: 32, Title: Social Media Analytics
+Date: 0610051631, Length: 70, X: 5, Y: 50, Cost: 50
+Description: Analyzing data from social media platforms.
+Keywords: Social_Media_Analytics, Computer_Science, VT, Virginia_Tech
+ID: 31, Title: Digital Forensics
+Date: 0610051630, Length: 85, X: 77, Y: 40, Cost: 40
+Description: Introduction to digital forensics methodologies.
+Keywords: Digital_Forensics, Computer_Science, VT, Virginia_Tech
+ID: 29, Title: Biometrics in Security
+Date: 0610051628, Length: 90, X: 15, Y: 20, Cost: 20
+Description: The use of biometrics for security purposes.
+Keywords: Biometrics, Computer_Science, VT, Virginia_Tech
+ID: 28, Title: Augmented Analytics
+Date: 0610051627, Length: 65, X: 48, Y: 10, Cost: 10
+Description: The role of augmented analytics in business.
+Keywords: Augmented_Analytics, Computer_Science, VT, Virginia_Tech
+ID: 27, Title: DevOps Practices
+Date: 0610051626, Length: 60, X: 92, Y: 95, Cost: 95
+Description: Best practices for implementing DevOps.
+Keywords: DevOps, Computer_Science, VT, Virginia_Tech
+ID: 26, Title: E-Commerce Trends
+Date: 0610051625, Length: 75, X: 87, Y: 85, Cost: 85
+Description: Current trends in e-commerce platforms.
+Keywords: E_Commerce, Computer_Science, VT, Virginia_Tech
+ID: 24, Title: Ethical Hacking
+Date: 0610051623, Length: 85, X: 61, Y: 65, Cost: 65
+Description: Exploring ethical hacking practices.
+Keywords: Ethical_Hacking, Computer_Science, VT, Virginia_Tech
+ID: 23, Title: Data Privacy Regulations
+Date: 0610051622, Length: 80, X: 50, Y: 55, Cost: 55
+Description: Examining data privacy laws and regulations.
+Keywords: Data_Privacy, Computer_Science, VT, Virginia_Tech
+ID: 22, Title: Digital Marketing Strategies
+Date: 0610051621, Length: 90, X: 35, Y: 45, Cost: 45
+Description: Effective strategies for digital marketing.
+Keywords: Digital_Marketing, Computer_Science, VT, Virginia_Tech
+ID: 21, Title: Human-Computer Interaction
+Date: 0610051620, Length: 65, X: 28, Y: 35, Cost: 35
+Description: Overview of human-computer interaction design.
+Keywords: HCI_Intro, Computer_Science, VT, Virginia_Tech
+ID: 19, Title: Computer Vision
+Date: 0610051618, Length: 75, X: 23, Y: 15, Cost: 15
+Description: Introduction to computer vision technologies.
+Keywords: Computer_Vision, Computer_Science, VT, Virginia_Tech
+ID: 18, Title: Software Engineering Principles
+Date: 0610051617, Length: 70, X: 1, Y: 5, Cost: 5
+Description: Core principles of software engineering.
+Keywords: Software_Eng, Computer_Science, VT, Virginia_Tech
+ID: 17, Title: Natural Language Processing
+Date: 0610051616, Length: 85, X: 12, Y: 90, Cost: 90
+Description: Understanding natural language processing techniques.
+Keywords: NLP, Computer_Science, VT, Virginia_Tech
+ID: 16, Title: Augmented Reality Applications
+Date: 0610051615, Length: 80, X: 89, Y: 80, Cost: 80
+Description: Applications of augmented reality in various fields.
+Keywords: AR, Computer_Science, VT, Virginia_Tech
+Seminars within 10 units of 0, 0:
+Found a record with key value 18 at 1, 5
+Found a record with key value 46 at 8, 5
+9 nodes visited in this search
+Seminars within 0 units of 50, 50:
+6 nodes visited in this search
+Seminars with dates in range 1 to 2:
+30 nodes visited in this search
+Seminars with costs in range 30 to 90:
+ID: 39, Title: Cognitive Computing
+Date: 0610051638, Length: 70, X: 10, Y: 30, Cost: 30
+Description: Principles of cognitive computing.
+Keywords: Cognitive_Computing, Computer_Science, VT, Virginia_Tech
+ID: 49, Title: Sustainable Technology
+Date: 0610051648, Length: 65, X: 81, Y: 35, Cost: 35
+Description: Exploring sustainable technology practices.
+Keywords: Sustainable_Tech, Computer_Science, VT, Virginia_Tech
+ID: 21, Title: Human-Computer Interaction
+Date: 0610051620, Length: 65, X: 28, Y: 35, Cost: 35
+Description: Overview of human-computer interaction design.
+Keywords: HCI_Intro, Computer_Science, VT, Virginia_Tech
+ID: 31, Title: Digital Forensics
+Date: 0610051630, Length: 85, X: 77, Y: 40, Cost: 40
+Description: Introduction to digital forensics methodologies.
+Keywords: Digital_Forensics, Computer_Science, VT, Virginia_Tech
+ID: 50, Title: Telemedicine
+Date: 0610051649, Length: 90, X: 92, Y: 45, Cost: 45
+Description: The future of telemedicine in healthcare.
+Keywords: Telemedicine, Computer_Science, VT, Virginia_Tech
+ID: 22, Title: Digital Marketing Strategies
+Date: 0610051621, Length: 90, X: 35, Y: 45, Cost: 45
+Description: Effective strategies for digital marketing.
+Keywords: Digital_Marketing, Computer_Science, VT, Virginia_Tech
+ID: 41, Title: Smart Manufacturing
+Date: 0610051640, Length: 60, X: 37, Y: 50, Cost: 50
+Description: Trends in smart manufacturing processes.
+Keywords: Smart_Manufacturing, Computer_Science, VT, Virginia_Tech
+ID: 32, Title: Social Media Analytics
+Date: 0610051631, Length: 70, X: 5, Y: 50, Cost: 50
+Description: Analyzing data from social media platforms.
+Keywords: Social_Media_Analytics, Computer_Science, VT, Virginia_Tech
+ID: 23, Title: Data Privacy Regulations
+Date: 0610051622, Length: 80, X: 50, Y: 55, Cost: 55
+Description: Examining data privacy laws and regulations.
+Keywords: Data_Privacy, Computer_Science, VT, Virginia_Tech
+ID: 42, Title: Artificial Neural Networks
+Date: 0610051641, Length: 65, X: 78, Y: 60, Cost: 60
+Description: Introduction to artificial neural networks.
+Keywords: ANN, Computer_Science, VT, Virginia_Tech
+ID: 33, Title: Financial Technology
+Date: 0610051632, Length: 75, X: 12, Y: 60, Cost: 60
+Description: The rise of financial technology innovations.
+Keywords: FinTech, Computer_Science, VT, Virginia_Tech
+ID: 24, Title: Ethical Hacking
+Date: 0610051623, Length: 85, X: 61, Y: 65, Cost: 65
+Description: Exploring ethical hacking practices.
+Keywords: Ethical_Hacking, Computer_Science, VT, Virginia_Tech
+ID: 43, Title: Digital Identity
+Date: 0610051642, Length: 90, X: 59, Y: 70, Cost: 70
+Description: Understanding digital identity concepts.
+Keywords: Digital_Identity, Computer_Science, VT, Virginia_Tech
+ID: 34, Title: Nanotechnology Applications
+Date: 0610051633, Length: 60, X: 55, Y: 70, Cost: 70
+Description: Exploring applications of nanotechnology.
+Keywords: Nanotechnology, Computer_Science, VT, Virginia_Tech
+ID: 44, Title: Mobile Security
+Date: 0610051643, Length: 80, X: 26, Y: 80, Cost: 80
+Description: Examining mobile security challenges.
+Keywords: Mobile_Security, Computer_Science, VT, Virginia_Tech
+ID: 16, Title: Augmented Reality Applications
+Date: 0610051615, Length: 80, X: 89, Y: 80, Cost: 80
+Description: Applications of augmented reality in various fields.
+Keywords: AR, Computer_Science, VT, Virginia_Tech
+ID: 26, Title: E-Commerce Trends
+Date: 0610051625, Length: 75, X: 87, Y: 85, Cost: 85
+Description: Current trends in e-commerce platforms.
+Keywords: E_Commerce, Computer_Science, VT, Virginia_Tech
+ID: 36, Title: Wearable Technology
+Date: 0610051635, Length: 90, X: 88, Y: 90, Cost: 90
+Description: Trends in wearable technology.
+Keywords: Wearables, Computer_Science, VT, Virginia_Tech
+ID: 17, Title: Natural Language Processing
+Date: 0610051616, Length: 85, X: 12, Y: 90, Cost: 90
+Description: Understanding natural language processing techniques.
+Keywords: NLP, Computer_Science, VT, Virginia_Tech
+39 nodes visited in this search
+Search FAILED -- There is no record with ID 30
+Seminars matching keyword Education:
+ID Tree:
+                                                                                                                (null)
+                                                                                                                    \
+                                                                                                                    (16)
+                                                                                                                    /
+                                                                                                            (null)
+                                                                                                                \
+                                                                                                                (17)
+                                                                                                                /
+                                                                                                        (null)
+                                                                                                            \
+                                                                                                            (18)
+                                                                                                            /
+                                                                                                    (null)
+                                                                                                        \
+                                                                                                        (19)
+                                                                                                        /
+                                                                                                (null)
+                                                                                                    \
+                                                                                                    (21)
+                                                                                                    /
+                                                                                            (null)
+                                                                                                \
+                                                                                                (22)
+                                                                                                /
+                                                                                        (null)
+                                                                                            \
+                                                                                            (23)
+                                                                                            /
+                                                                                    (null)
+                                                                                        \
+                                                                                        (24)
+                                                                                        /
+                                                                                (null)
+                                                                                    \
+                                                                                    (26)
+                                                                                    /
+                                                                            (null)
+                                                                                \
+                                                                                (27)
+                                                                                /
+                                                                        (null)
+                                                                            \
+                                                                            (28)
+                                                                            /
+                                                                    (null)
+                                                                        \
+                                                                        (29)
+                                                                        /
+                                                                (null)
+                                                                    \
+                                                                    (31)
+                                                                    /
+                                                            (null)
+                                                                \
+                                                                (32)
+                                                                /
+                                                        (null)
+                                                            \
+                                                            (33)
+                                                            /
+                                                    (null)
+                                                        \
+                                                        (34)
+                                                        /
+                                                (null)
+                                                    \
+                                                    (36)
+                                                    /
+                                            (null)
+                                                \
+                                                (37)
+                                                /
+                                        (null)
+                                            \
+                                            (38)
+                                            /
+                                    (null)
+                                        \
+                                        (39)
+                                        /
+                                (null)
+                                    \
+                                    (41)
+                                    /
+                            (null)
+                                \
+                                (42)
+                                /
+                        (null)
+                            \
+                            (43)
+                            /
+                    (null)
+                        \
+                        (44)
+                        /
+                (null)
+                    \
+                    (46)
+                    /
+            (null)
+                \
+                (47)
+                /
+        (null)
+            \
+            (48)
+            /
+    (null)
+        \
+        (49)
+        /
+(null)
+    \
+    (50)
+    /
+(null)
+Number of records: 29
+Location Tree:
+                                    (I)
+                                (I)
+                            (I)
+                        (E)
+                        (I)
+                    (E)
+                    (I)
+                (I)
+            (I)
+        (I)
+    (I)
+(Leaf with 1 objects: 27)
+(Leaf with 1 objects: 36)
+    (Leaf with 1 objects: 16)
+        (Leaf with 1 objects: 26)
+            (E)
+                (E)
+                            (I)
+                        (E)
+                        (I)
+                    (I)
+                (I)
+            (E)
+            (I)
+        (Leaf with 1 objects: 50)
+        (Leaf with 1 objects: 49)
+                (I)
+            (Leaf with 1 objects: 42)
+            (Leaf with 1 objects: 31)
+                    (Leaf with 1 objects: 38)
+                                (I)
+                            (I)
+                        (I)
+                    (E)
+                    (I)
+                (I)
+            (E)
+            (I)
+        (I)
+    (E)
+    (I)
+(Leaf with 1 objects: 24)
+(Leaf with 1 objects: 43)
+        (Leaf with 1 objects: 34)
+                (E)
+                        (I)
+                    (E)
+                    (I)
+                (Leaf with 1 objects: 44)
+                (Leaf with 1 objects: 17)
+                            (I)
+                        (I)
+                    (I)
+                (Leaf with 1 objects: 23)
+                (I)
+            (Leaf with 1 objects: 41)
+            (Leaf with 1 objects: 22)
+                    (I)
+                (I)
+            (Leaf with 1 objects: 48)
+            (Leaf with 1 objects: 28)
+                (Leaf with 1 objects: 47)
+                        (I)
+                    (I)
+                (Leaf with 1 objects: 21)
+                (I)
+            (I)
+        (Leaf with 1 objects: 33)
+        (Leaf with 1 objects: 32)
+            (E)
+                    (I)
+                (I)
+            (E)
+            (I)
+        (Leaf with 1 objects: 37)
+        (Leaf with 1 objects: 19)
+                (I)
+            (I)
+        (I)
+    (Leaf with 1 objects: 39)
+    (Leaf with 1 objects: 29)
+        (E)
+            (I)
+        (Leaf with 1 objects: 46)
+        (Leaf with 1 objects: 18)
+Date Tree:
+                                                                                                                (null)
+                                                                                                                    \
+                                                                                                                    (0610051615)
+                                                                                                                    /
+                                                                                                            (null)
+                                                                                                                \
+                                                                                                                (0610051616)
+                                                                                                                /
+                                                                                                        (null)
+                                                                                                            \
+                                                                                                            (0610051617)
+                                                                                                            /
+                                                                                                    (null)
+                                                                                                        \
+                                                                                                        (0610051618)
+                                                                                                        /
+                                                                                                (null)
+                                                                                                    \
+                                                                                                    (0610051620)
+                                                                                                    /
+                                                                                            (null)
+                                                                                                \
+                                                                                                (0610051621)
+                                                                                                /
+                                                                                        (null)
+                                                                                            \
+                                                                                            (0610051622)
+                                                                                            /
+                                                                                    (null)
+                                                                                        \
+                                                                                        (0610051623)
+                                                                                        /
+                                                                                (null)
+                                                                                    \
+                                                                                    (0610051625)
+                                                                                    /
+                                                                            (null)
+                                                                                \
+                                                                                (0610051626)
+                                                                                /
+                                                                        (null)
+                                                                            \
+                                                                            (0610051627)
+                                                                            /
+                                                                    (null)
+                                                                        \
+                                                                        (0610051628)
+                                                                        /
+                                                                (null)
+                                                                    \
+                                                                    (0610051630)
+                                                                    /
+                                                            (null)
+                                                                \
+                                                                (0610051631)
+                                                                /
+                                                        (null)
+                                                            \
+                                                            (0610051632)
+                                                            /
+                                                    (null)
+                                                        \
+                                                        (0610051633)
+                                                        /
+                                                (null)
+                                                    \
+                                                    (0610051635)
+                                                    /
+                                            (null)
+                                                \
+                                                (0610051636)
+                                                /
+                                        (null)
+                                            \
+                                            (0610051637)
+                                            /
+                                    (null)
+                                        \
+                                        (0610051638)
+                                        /
+                                (null)
+                                    \
+                                    (0610051640)
+                                    /
+                            (null)
+                                \
+                                (0610051641)
+                                /
+                        (null)
+                            \
+                            (0610051642)
+                            /
+                    (null)
+                        \
+                        (0610051643)
+                        /
+                (null)
+                    \
+                    (0610051645)
+                    /
+            (null)
+                \
+                (0610051646)
+                /
+        (null)
+            \
+            (0610051647)
+            /
+    (null)
+        \
+        (0610051648)
+        /
+(null)
+    \
+    (0610051649)
+    /
+(null)
+Number of records: 29
+Keyword Tree:
+                                                                                                                        (null)
+                                                                                                                            \
+                                                                                                                            (3D_Printing)
+                                                                                                                            /
+                                                                                                    (null)
+                                                                                                        \
+                                                                                                        (AI_Ethics)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                            \
+                                                                                                            (ANN)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                \
+                                                                                                                (AR)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                    \
+                                                                                                                    (Augmented_Analytics)
+                                                                                                                    /
+                                                                                                                (null)
+                                                                                                                        \
+                                                                                                                        (Biometrics)
+                                                                                                                        /
+                                        (null)
+                                            \
+                                            (Cognitive_Computing)
+                                            /
+(null)
+    \
+    (Computer_Science)
+    /
+(null)
+        \
+        (Computer_Science)
+        /
+    (null)
+            \
+            (Computer_Science)
+            /
+        (null)
+                \
+                (Computer_Science)
+                /
+            (null)
+                    \
+                    (Computer_Science)
+                    /
+                (null)
+                        \
+                        (Computer_Science)
+                        /
+                    (null)
+                            \
+                            (Computer_Science)
+                            /
+                        (null)
+                                \
+                                (Computer_Science)
+                                /
+                            (null)
+                                    \
+                                    (Computer_Science)
+                                    /
+                                (null)
+                                        \
+                                        (Computer_Science)
+                                        /
+                                    (null)
+                                                \
+                                                (Computer_Science)
+                                                /
+                                            (null)
+                                                    \
+                                                    (Computer_Science)
+                                                    /
+                                                (null)
+                                                        \
+                                                        (Computer_Science)
+                                                        /
+                                                    (null)
+                                                            \
+                                                            (Computer_Science)
+                                                            /
+                                                        (null)
+                                                                \
+                                                                (Computer_Science)
+                                                                /
+                                                            (null)
+                                                                    \
+                                                                    (Computer_Science)
+                                                                    /
+                                                                (null)
+                                                                        \
+                                                                        (Computer_Science)
+                                                                        /
+                                                                    (null)
+                                                                            \
+                                                                            (Computer_Science)
+                                                                            /
+                                                                        (null)
+                                                                                \
+                                                                                (Computer_Science)
+                                                                                /
+                                                                            (null)
+                                                                                    \
+                                                                                    (Computer_Science)
+                                                                                    /
+                                                                                (null)
+                                                                                        \
+                                                                                        (Computer_Science)
+                                                                                        /
+                                                                                    (null)
+                                                                                            \
+                                                                                            (Computer_Science)
+                                                                                            /
+                                                                                        (null)
+                                                                                                \
+                                                                                                (Computer_Science)
+                                                                                                /
+                                                                                            (null)
+                                                                                                    \
+                                                                                                    (Computer_Science)
+                                                                                                    /
+                                                                                                (null)
+                                                                                                        \
+                                                                                                        (Computer_Science)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                            \
+                                                                                                            (Computer_Science)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                \
+                                                                                                                (Computer_Science)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                    \
+                                                                                                                    (Computer_Science)
+                                                                                                                    /
+                                                                                                                (null)
+                                                                                                                                \
+                                                                                                                                (Computer_Science)
+                                                                                                                                /
+                                                                                                                    (null)
+                                                                                                                        \
+                                                                                                                        (Computer_Vision)
+                                                                                                                        /
+                                                                                                                    (null)
+                                                                                                                            \
+                                                                                                                            (Data_Privacy)
+                                                                                                                            /
+                                                                                                            (null)
+                                                                                                                \
+                                                                                                                (DevOps)
+                                                                                                                /
+                                                                                                        (null)
+                                                                                                            \
+                                                                                                            (Digital_Forensics)
+                                                                                                            /
+                                                                                                    (null)
+                                                                                                        \
+                                                                                                        (Digital_Identity)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                                    \
+                                                                                                                    (Digital_Marketing)
+                                                                                                                    /
+                                                                                                            (null)
+                                                                                                                \
+                                                                                                                (Digital_Twins)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                        \
+                                                                                                                        (E_Commerce)
+                                                                                                                        /
+                                                                                                                (null)
+                                                                                                                    \
+                                                                                                                    (Ethical_Hacking)
+                                                                                                                    /
+                                                                                                                (null)
+                                                                                                                                    \
+                                                                                                                                    (FinTech)
+                                                                                                                                    /
+                                                                                                                    (null)
+                                                                                                                        \
+                                                                                                                        (HCI_Intro)
+                                                                                                                        /
+                                                                                                                    (null)
+                                                                                                                            \
+                                                                                                                            (Health_Informatics)
+                                                                                                                            /
+                                                                                                            (null)
+                                                                                                                \
+                                                                                                                (Mobile_Security)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                    \
+                                                                                                                    (NLP)
+                                                                                                                    /
+                                                                                                                (null)
+                                                                                                                        \
+                                                                                                                        (Nanotechnology)
+                                                                                                                        /
+                                                                                                (null)
+                                                                                                    \
+                                                                                                    (Smart_Home)
+                                                                                                    /
+                                                                                                (null)
+                                                                                                        \
+                                                                                                        (Smart_Manufacturing)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                            \
+                                                                                                            (Social_Media_Analytics)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                \
+                                                                                                                (Software_Eng)
+                                                                                                                /
+                                                                                                        (null)
+                                                                                                            \
+                                                                                                            (Sustainable_Tech)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                    \
+                                                                                                                    (Telemedicine)
+                                                                                                                    /
+(null)
+    \
+    (VT)
+    /
+(null)
+        \
+        (VT)
+        /
+    (null)
+            \
+            (VT)
+            /
+        (null)
+                \
+                (VT)
+                /
+            (null)
+                    \
+                    (VT)
+                    /
+                (null)
+                        \
+                        (VT)
+                        /
+                    (null)
+                            \
+                            (VT)
+                            /
+                        (null)
+                                \
+                                (VT)
+                                /
+                            (null)
+                                    \
+                                    (VT)
+                                    /
+                                (null)
+                                        \
+                                        (VT)
+                                        /
+                                    (null)
+                                            \
+                                            (VT)
+                                            /
+                                        (null)
+                                                \
+                                                (VT)
+                                                /
+                                            (null)
+                                                    \
+                                                    (VT)
+                                                    /
+                                                (null)
+                                                        \
+                                                        (VT)
+                                                        /
+                                                    (null)
+                                                            \
+                                                            (VT)
+                                                            /
+                                                        (null)
+                                                                \
+                                                                (VT)
+                                                                /
+                                                            (null)
+                                                                    \
+                                                                    (VT)
+                                                                    /
+                                                                (null)
+                                                                        \
+                                                                        (VT)
+                                                                        /
+                                                                    (null)
+                                                                            \
+                                                                            (VT)
+                                                                            /
+                                                                        (null)
+                                                                                \
+                                                                                (VT)
+                                                                                /
+                                                                            (null)
+                                                                                    \
+                                                                                    (VT)
+                                                                                    /
+                                                                                (null)
+                                                                                        \
+                                                                                        (VT)
+                                                                                        /
+                                                                                    (null)
+                                                                                            \
+                                                                                            (VT)
+                                                                                            /
+                                                                                        (null)
+                                                                                                \
+                                                                                                (VT)
+                                                                                                /
+                                                                                            (null)
+                                                                                                    \
+                                                                                                    (VT)
+                                                                                                    /
+                                                                                                (null)
+                                                                                                        \
+                                                                                                        (VT)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                            \
+                                                                                                            (VT)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                \
+                                                                                                                (VT)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                                \
+                                                                                                                                (VT)
+                                                                                                                                /
+        (null)
+            \
+            (Virginia_Tech)
+            /
+        (null)
+                \
+                (Virginia_Tech)
+                /
+            (null)
+                    \
+                    (Virginia_Tech)
+                    /
+                (null)
+                        \
+                        (Virginia_Tech)
+                        /
+                    (null)
+                            \
+                            (Virginia_Tech)
+                            /
+                        (null)
+                                \
+                                (Virginia_Tech)
+                                /
+                            (null)
+                                    \
+                                    (Virginia_Tech)
+                                    /
+                                (null)
+                                        \
+                                        (Virginia_Tech)
+                                        /
+                                    (null)
+                                            \
+                                            (Virginia_Tech)
+                                            /
+                                        (null)
+                                                \
+                                                (Virginia_Tech)
+                                                /
+                                            (null)
+                                                    \
+                                                    (Virginia_Tech)
+                                                    /
+                                                (null)
+                                                        \
+                                                        (Virginia_Tech)
+                                                        /
+                                                    (null)
+                                                            \
+                                                            (Virginia_Tech)
+                                                            /
+                                                        (null)
+                                                                \
+                                                                (Virginia_Tech)
+                                                                /
+                                                            (null)
+                                                                    \
+                                                                    (Virginia_Tech)
+                                                                    /
+                                                                (null)
+                                                                        \
+                                                                        (Virginia_Tech)
+                                                                        /
+                                                                    (null)
+                                                                            \
+                                                                            (Virginia_Tech)
+                                                                            /
+                                                                        (null)
+                                                                                \
+                                                                                (Virginia_Tech)
+                                                                                /
+                                                                            (null)
+                                                                                    \
+                                                                                    (Virginia_Tech)
+                                                                                    /
+                                                                                (null)
+                                                                                        \
+                                                                                        (Virginia_Tech)
+                                                                                        /
+                                                                                    (null)
+                                                                                            \
+                                                                                            (Virginia_Tech)
+                                                                                            /
+                                                                                        (null)
+                                                                                                \
+                                                                                                (Virginia_Tech)
+                                                                                                /
+                                                                                            (null)
+                                                                                                    \
+                                                                                                    (Virginia_Tech)
+                                                                                                    /
+                                                                                                (null)
+                                                                                                        \
+                                                                                                        (Virginia_Tech)
+                                                                                                        /
+                                                                                                    (null)
+                                                                                                            \
+                                                                                                            (Virginia_Tech)
+                                                                                                            /
+                                                                                                        (null)
+                                                                                                                \
+                                                                                                                (Virginia_Tech)
+                                                                                                                /
+                                                                                                            (null)
+                                                                                                                    \
+                                                                                                                    (Virginia_Tech)
+                                                                                                                    /
+                                                                                                                (null)
+                                                                                                                        \
+                                                                                                                        (Virginia_Tech)
+                                                                                                                        /
+                                                                                                                    (null)
+                                                                                                                            \
+                                                                                                                            (Virginia_Tech)
+                                                                                                                            /
+                                                                                                                    (null)
+                                                                                                                        \
+                                                                                                                        (Wearables)
+                                                                                                                        /
+                                                                                                                    (null)
+Number of records: 116
+Cost Tree:
+    (null)
+        \
+        (5)
+        /
+    (null)
+            \
+            (5)
+            /
+    (null)
+        \
+        (10)
+        /
+    (null)
+                \
+                (10)
+                /
+    (null)
+        \
+        (15)
+        /
+    (null)
+            \
+            (15)
+            /
+    (null)
+        \
+        (20)
+        /
+    (null)
+                    \
+                    (20)
+                    /
+            (null)
+                \
+                (25)
+                /
+            (null)
+                        \
+                        (30)
+                        /
+        (null)
+            \
+            (35)
+            /
+        (null)
+                \
+                (35)
+                /
+            (null)
+                    \
+                    (40)
+                    /
+            (null)
+                \
+                (45)
+                /
+            (null)
+                            \
+                            (45)
+                            /
+            (null)
+                \
+                (50)
+                /
+            (null)
+                    \
+                    (50)
+                    /
+            (null)
+                \
+                (55)
+                /
+        (null)
+            \
+            (60)
+            /
+        (null)
+                        \
+                        (60)
+                        /
+            (null)
+                \
+                (65)
+                /
+        (null)
+            \
+            (70)
+            /
+        (null)
+                    \
+                    (70)
+                    /
+    (null)
+        \
+        (80)
+        /
+    (null)
+            \
+            (80)
+            /
+    (null)
+        \
+        (85)
+        /
+(null)
+    \
+    (90)
+    /
+(null)
+                \
+                (90)
+                /
+        (null)
+            \
+            (95)
+            /
+        (null)
+Number of records: 29

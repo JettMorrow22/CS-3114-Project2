@@ -64,7 +64,7 @@ public class SemSearch {
         try (Scanner fileInput = new Scanner(new File(args[1]))) {
             // set up the output stream
             PrintWriter stdout = new PrintWriter(System.out);
-
+            
             // create the Controller & interpreter
             Controller controller = new Controller(worldSize);
             CommandProcessor interpreter = new CommandProcessor(controller,
